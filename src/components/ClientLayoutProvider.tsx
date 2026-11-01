@@ -8,7 +8,6 @@ import WhatsAppFloatingButton from './WhatsAppFloatingButton';
 import GalaxyChatBot from './GalaxyChatBot';
 import VipBookingModal from './VipBookingModal';
 import { BookingProvider, useBooking } from '@/context/BookingContext';
-import { ThemeProvider } from '@/context/ThemeContext';
 
 function InnerLayout({ children }: { children: React.ReactNode }) {
   const { isBookingOpen, closeBooking, selectedProject, openBooking } = useBooking();
@@ -51,10 +50,8 @@ export default function ClientLayoutProvider({
   children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider>
-      <BookingProvider>
-        <InnerLayout>{children}</InnerLayout>
-      </BookingProvider>
-    </ThemeProvider>
+    <BookingProvider>
+      <InnerLayout>{children}</InnerLayout>
+    </BookingProvider>
   );
 }

@@ -4,8 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root, [data-theme='emerald'] {
-  /* Default: Emerald Alpine & Forest Jade Theme */
+:root {
+  /* Chosen Brand Theme: Emerald Alpine & Forest Jade */
   --primary: #059669;
   --primary-hover: #047857;
   --primary-light: #ECFDF5;
@@ -21,44 +21,6 @@
   --theme-border: #D1D5DB;
   --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
-}
-
-[data-theme='sapphire'] {
-  /* Royal Sapphire & Ocean Luxe Edition */
-  --primary: #2563EB;
-  --primary-hover: #1D4ED8;
-  --primary-light: #EFF6FF;
-  --primary-border: #BFDBFE;
-  --primary-text: #1E40AF;
-  --secondary: #0284C7;
-  --theme-bg: #F8FAFC;
-  --theme-surface: #F1F5F9;
-  --theme-card: #FFFFFF;
-  --theme-heading: #0F172A;
-  --theme-body: #334155;
-  --theme-muted: #64748B;
-  --theme-border: #E2E8F0;
-  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
-}
-
-[data-theme='gold-classic'] {
-  /* Saved Original Theme: Imperial Gold & Warm Stone */
-  --primary: #B8860B;
-  --primary-hover: #996515;
-  --primary-light: #FFFBEB;
-  --primary-border: #FDE68A;
-  --primary-text: #92400E;
-  --secondary: #D4AF37;
-  --theme-bg: #FAFAF9;
-  --theme-surface: #F8F9FA;
-  --theme-card: #FFFFFF;
-  --theme-heading: #0F172A;
-  --theme-body: #475569;
-  --theme-muted: #64748B;
-  --theme-border: #E5E7EB;
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Cinzel', Georgia, serif;
 }
 
 * {

@@ -11,7 +11,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { useBooking } from '@/context/BookingContext';
-import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -86,10 +85,8 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right Area: Theme Switcher + Get a Quote */}
+          {/* Right Area: Get a Quote */}
           <div className="hidden sm:flex items-center space-x-3">
-            <ThemeSwitcher />
-
             <motion.button
               onClick={() => openBooking()}
               whileHover={{ scale: 1.04, y: -1 }}
@@ -104,7 +101,6 @@ export default function Navbar() {
 
           {/* Mobile Right Controls */}
           <div className="flex sm:hidden items-center space-x-2">
-            <ThemeSwitcher />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-xl text-slate-800 hover:bg-gray-100 border border-gray-200 transition-colors"
