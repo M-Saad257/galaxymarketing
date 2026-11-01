@@ -58,10 +58,10 @@ export default function SectionNavDock() {
 
   return (
     <>
-      {/* Top Gold Scroll Progress Bar */}
+      {/* Top Emerald Scroll Progress Bar */}
       <div className="fixed top-0 left-0 right-0 h-[3px] bg-transparent z-50 pointer-events-none">
         <div 
-          className="h-full bg-gradient-to-r from-gold-600 via-gold-400 to-amber-300 shadow-[0_0_12px_rgba(212,175,55,0.8)] transition-all duration-150"
+          className="h-full bg-gradient-to-r from-emerald-700 via-primary to-emerald-400 shadow-[0_0_10px_rgba(5,150,105,0.6)] transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -87,8 +87,8 @@ export default function SectionNavDock() {
                 <div
                   className={`rounded-full transition-all duration-300 ${
                     isActive 
-                      ? 'w-3 h-3 bg-gold-400 shadow-gold-sm ring-4 ring-gold-500/20' 
-                      : 'w-2 h-2 bg-gray-600 group-hover:bg-gold-300/80'
+                      ? 'w-3 h-3 bg-primary shadow-sm ring-4 ring-primary/25' 
+                      : 'w-2 h-2 bg-gray-400 group-hover:bg-primary'
                   }`}
                 />
               </button>

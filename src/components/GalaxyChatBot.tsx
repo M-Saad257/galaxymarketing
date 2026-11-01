@@ -158,16 +158,16 @@ export default function GalaxyChatBot() {
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Open Galaxy AI Real Estate Concierge"
-          className="relative flex items-center justify-center w-12 h-12 rounded-full bg-white border-2 border-gold-500  text-black shadow-lg shadow-gold-500/25 hover:scale-110 active:scale-95 transition-all duration-300 group cursor-pointer"
+          className="relative flex items-center justify-center w-12 h-12 rounded-full bg-white border-2 border-primary text-black shadow-lg shadow-primary/25 hover:scale-110 active:scale-95 transition-all duration-300 group cursor-pointer"
         >
           {/* Animated Glow Wave */}
-          <span className="absolute -inset-1 rounded-full bg-gold-400/40 animate-ping opacity-60 pointer-events-none"></span>
+          <span className="absolute -inset-1 rounded-full bg-primary/30 animate-ping opacity-60 pointer-events-none"></span>
 
           {/* Bot Icon */}
-          <img src='/images/logo-icon.png' alt="Chatbot" className="w-8 h-8 text-black relative z-10 drop-shadow" />
+          <img src='/images/logo-icon.png' alt="Chatbot" className="w-8 h-8 object-contain relative z-10 drop-shadow" />
 
           {/* Online Dot */}
-          <span className="absolute top-0 right-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-black"></span>
+          <span className="absolute top-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-white"></span>
         </button>
       </div>
 
