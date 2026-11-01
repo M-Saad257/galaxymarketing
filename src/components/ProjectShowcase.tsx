@@ -80,22 +80,22 @@ export default function ProjectShowcase() {
 
   const stats = [
     {
-      icon: <Award className="w-5 h-5 text-[#B8860B]" />,
+      icon: <Award className="w-5 h-5 text-primary" />,
       value: '5+',
       label: 'Years of Experience',
     },
     {
-      icon: <FileCheck2 className="w-5 h-5 text-[#B8860B]" />,
+      icon: <FileCheck2 className="w-5 h-5 text-primary" />,
       value: '3,215',
       label: 'Deals Done',
     },
     {
-      icon: <Users className="w-5 h-5 text-[#B8860B]" />,
+      icon: <Users className="w-5 h-5 text-primary" />,
       value: '100%',
       label: 'Client Satisfaction',
     },
     {
-      icon: <ShieldCheck className="w-5 h-5 text-[#B8860B]" />,
+      icon: <ShieldCheck className="w-5 h-5 text-primary" />,
       value: 'Trusted',
       label: 'in Islamabad',
     },
@@ -111,7 +111,7 @@ export default function ProjectShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="bg-[#F8F9FA] rounded-3xl border border-gray-200/80 p-6 sm:p-8 shadow-sm"
+          className="bg-theme-surface rounded-3xl border border-gray-200/80 p-6 sm:p-8 shadow-sm"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x-0 md:divide-x divide-gray-200">
             {stats.map((stat, idx) => (
@@ -124,10 +124,10 @@ export default function ProjectShowcase() {
                 whileHover={{ y: -4, scale: 1.02 }}
                 className="flex flex-col items-center justify-center space-y-1.5 px-3 transition-transform cursor-default"
               >
-                <div className="p-2 rounded-xl bg-amber-50 text-[#B8860B] border border-amber-200/60 mb-0.5 shadow-sm">
+                <div className="p-2 rounded-xl bg-primary-light text-primary border border-primary-border mb-0.5 shadow-sm">
                   {stat.icon}
                 </div>
-                <div className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <div className="text-2xl sm:text-4xl font-extrabold text-theme-heading tracking-tight">
                   {stat.value}
                 </div>
                 <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
@@ -151,11 +151,11 @@ export default function ProjectShowcase() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-1.5"
           >
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#B8860B]">
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
               FEATURED PROJECTS
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
-              Premium Projects for a <span className="text-[#B8860B]">Better Tomorrow</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-theme-heading tracking-tight">
+              Premium Projects for a <span className="text-primary">Better Tomorrow</span>
             </h2>
           </motion.div>
 
@@ -173,10 +173,10 @@ export default function ProjectShowcase() {
             >
               <Link
                 href="/projects"
-                className="hidden sm:flex px-4 py-2 rounded-full border border-gray-300 bg-white text-slate-700 hover:text-[#B8860B] hover:border-[#B8860B] text-xs font-semibold items-center space-x-1.5 transition-colors shadow-sm group"
+                className="hidden sm:flex px-4 py-2 rounded-full border border-gray-300 bg-white text-slate-700 hover:text-primary hover:border-primary text-xs font-semibold items-center space-x-1.5 transition-colors shadow-sm group"
               >
                 <span>View All Projects</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#B8860B] transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-3.5 h-3.5 text-primary transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </motion.div>
 
@@ -187,7 +187,7 @@ export default function ProjectShowcase() {
                 whileHover={{ scale: 1.12, y: -2 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 18 }}
-                className="w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-[#B8860B] hover:text-white hover:border-[#B8860B] text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-sm"
+                className="w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-primary hover:text-white hover:border-primary text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-sm"
                 aria-label="Previous Projects"
               >
                 <ChevronLeft className="w-4 h-4" />
@@ -197,7 +197,7 @@ export default function ProjectShowcase() {
                 whileHover={{ scale: 1.12, y: -2 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 18 }}
-                className="w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-[#B8860B] hover:text-white hover:border-[#B8860B] text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-sm"
+                className="w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-primary hover:text-white hover:border-primary text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-sm"
                 aria-label="Next Projects"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -224,7 +224,7 @@ export default function ProjectShowcase() {
                 transition={{ duration: 0.55, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ y: -8 }}
                 onClick={() => openBooking(project.title)}
-                className="group relative h-[300px] sm:h-[340px] rounded-3xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl border border-gray-200 hover:border-[#B8860B] transition-all duration-300 bg-white"
+                className="group relative h-[300px] sm:h-[340px] rounded-3xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl border border-gray-200 hover:border-primary transition-all duration-300 bg-white"
               >
                 {/* Image */}
                 <Image
@@ -236,7 +236,7 @@ export default function ProjectShowcase() {
 
                 {/* Tag Pill */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-white/95 text-[#B8860B] border border-amber-200 shadow-sm backdrop-blur-md">
+                  <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-white/95 text-primary border border-primary-border shadow-sm backdrop-blur-md">
                     {project.tag}
                   </span>
                 </div>
@@ -247,18 +247,18 @@ export default function ProjectShowcase() {
                 {/* Bottom Info */}
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-amber-300 transition-colors leading-tight">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-primary-border transition-colors leading-tight">
                       {project.title}
                     </h3>
                     <div className="flex items-center space-x-1.5 text-xs text-gray-200 mt-1 font-medium">
-                      <MapPin className="w-3.5 h-3.5 text-amber-400" />
+                      <MapPin className="w-3.5 h-3.5 text-primary-border" />
                       <span>{project.location}</span>
                     </div>
                   </div>
 
                   <motion.div 
                     whileHover={{ scale: 1.15 }}
-                    className="w-10 h-10 rounded-full bg-white/95 text-slate-900 group-hover:bg-[#B8860B] group-hover:text-white transition-all flex items-center justify-center shrink-0 ml-3 shadow-lg"
+                    className="w-10 h-10 rounded-full bg-white/95 text-slate-900 group-hover:bg-primary group-hover:text-white transition-all flex items-center justify-center shrink-0 ml-3 shadow-lg"
                   >
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                   </motion.div>
@@ -278,7 +278,7 @@ export default function ProjectShowcase() {
                 setStartIndex(idx);
               }}
               className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                idx === startIndex ? 'w-6 bg-[#B8860B]' : 'w-2 bg-gray-300 hover:bg-gray-400'
+                idx === startIndex ? 'w-6 bg-primary' : 'w-2 bg-gray-300 hover:bg-gray-400'
               }`}
               aria-label={`Slide ${idx + 1}`}
             />

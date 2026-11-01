@@ -44,16 +44,16 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
   };
 
   return (
-    <section id="roi-calculator" className="relative py-24 sm:py-32 bg-[#FAFAF9] border-b border-gray-200 overflow-hidden text-[#0F172A]">
+    <section id="roi-calculator" className="relative py-24 sm:py-32 bg-theme-bg border-b border-gray-200 overflow-hidden text-theme-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-[#B8860B] font-extrabold bg-amber-50 border border-amber-200/80 px-4 py-1.5 rounded-full shadow-sm">
-            <Calculator className="w-3.5 h-3.5 text-[#B8860B]" />
+          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-primary font-extrabold bg-primary-light border border-primary-border px-4 py-1.5 rounded-full shadow-sm">
+            <Calculator className="w-3.5 h-3.5 text-primary" />
             <span>Yield Simulator</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-serif text-slate-900 tracking-tight">
-            Calculate Your <span className="text-[#B8860B]">Wealth Growth</span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold font-serif text-theme-heading tracking-tight">
+            Calculate Your <span className="text-primary">Wealth Growth</span>
           </h2>
 
           <p className="text-slate-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl mx-auto">
@@ -67,7 +67,7 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
           <div className="lg:col-span-7 bg-white border border-gray-200 rounded-3xl p-6 sm:p-9 shadow-sm space-y-7">
             {/* Asset Class Selection */}
             <div>
-              <label className="block text-xs uppercase font-extrabold tracking-wider text-slate-900 mb-3">
+              <label className="block text-xs uppercase font-extrabold tracking-wider text-theme-heading mb-3">
                 Select Asset Class
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -76,8 +76,8 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
                   onClick={() => setAssetClass('murree')}
                   className={`p-3.5 rounded-2xl text-xs font-semibold text-left transition-all cursor-pointer ${
                     assetClass === 'murree'
-                      ? 'bg-[#B8860B] text-white font-extrabold shadow-md scale-102'
-                      : 'bg-[#F8F9FA] text-slate-800 border border-gray-200 hover:border-[#B8860B]'
+                      ? 'bg-primary text-white font-extrabold shadow-md scale-102'
+                      : 'bg-theme-surface text-slate-800 border border-gray-200 hover:border-primary'
                   }`}
                 >
                   <div className="text-sm font-bold">Murree Chalets</div>
@@ -89,8 +89,8 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
                   onClick={() => setAssetClass('commercial')}
                   className={`p-3.5 rounded-2xl text-xs font-semibold text-left transition-all cursor-pointer ${
                     assetClass === 'commercial'
-                      ? 'bg-[#B8860B] text-white font-extrabold shadow-md scale-102'
-                      : 'bg-[#F8F9FA] text-slate-800 border border-gray-200 hover:border-[#B8860B]'
+                      ? 'bg-primary text-white font-extrabold shadow-md scale-102'
+                      : 'bg-theme-surface text-slate-800 border border-gray-200 hover:border-primary'
                   }`}
                 >
                   <div className="text-sm font-bold">Commercial Towers</div>
@@ -102,8 +102,8 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
                   onClick={() => setAssetClass('societies')}
                   className={`p-3.5 rounded-2xl text-xs font-semibold text-left transition-all cursor-pointer ${
                     assetClass === 'societies'
-                      ? 'bg-[#B8860B] text-white font-extrabold shadow-md scale-102'
-                      : 'bg-[#F8F9FA] text-slate-800 border border-gray-200 hover:border-[#B8860B]'
+                      ? 'bg-primary text-white font-extrabold shadow-md scale-102'
+                      : 'bg-theme-surface text-slate-800 border border-gray-200 hover:border-primary'
                   }`}
                 >
                   <div className="text-sm font-bold">Megacity Plots</div>
@@ -118,7 +118,7 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
                 <span className="text-xs uppercase font-extrabold tracking-wider text-slate-700">
                   Initial Investment Capital
                 </span>
-                <span className="text-xl sm:text-2xl font-black font-serif text-[#B8860B]">
+                <span className="text-xl sm:text-2xl font-black font-serif text-primary">
                   PKR {amountMillion} Million
                 </span>
               </div>
@@ -129,7 +129,7 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
                 step="0.5"
                 value={amountMillion}
                 onChange={(e) => setAmountMillion(parseFloat(e.target.value))}
-                className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#B8860B]"
+                className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary"
               />
               <div className="flex justify-between text-xs text-slate-500 font-bold font-mono">
                 <span>PKR 2.5M</span>
@@ -144,7 +144,7 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
                 <span className="text-xs uppercase font-extrabold tracking-wider text-slate-700">
                   Investment Holding Tenure
                 </span>
-                <span className="text-xl sm:text-2xl font-black font-serif text-slate-900">
+                <span className="text-xl sm:text-2xl font-black font-serif text-theme-heading">
                   {tenureYears} {tenureYears === 1 ? 'Year' : 'Years'}
                 </span>
               </div>
@@ -155,7 +155,7 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
                 step="1"
                 value={tenureYears}
                 onChange={(e) => setTenureYears(parseInt(e.target.value))}
-                className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#B8860B]"
+                className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary"
               />
               <div className="flex justify-between text-xs text-slate-500 font-bold font-mono">
                 <span>1 Year</span>
@@ -165,7 +165,7 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
             </div>
 
             {/* Trust disclaimer */}
-            <div className="flex items-center space-x-2.5 text-xs text-slate-600 bg-[#F8F9FA] p-3.5 rounded-xl border border-gray-200">
+            <div className="flex items-center space-x-2.5 text-xs text-slate-600 bg-theme-surface p-3.5 rounded-xl border border-gray-200">
               <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>
                 Based on historical 6-year verified delivery benchmarks in Murree & Islamabad by Galaxy Marketing.
@@ -187,7 +187,7 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
 
               {/* Big Projected Total */}
               <div>
-                <div className="text-3xl sm:text-5xl font-black text-[#B8860B] font-serif">
+                <div className="text-3xl sm:text-5xl font-black text-primary font-serif">
                   {formatPkr(totalProjectedValue)}
                 </div>
                 <div className="text-xs text-slate-500 mt-1 font-medium">
@@ -197,15 +197,15 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
 
               {/* Split Breakdown */}
               <div className="space-y-2.5 pt-1">
-                <div className="bg-[#F8F9FA] p-3.5 rounded-xl border border-gray-200 flex items-center justify-between text-xs sm:text-sm">
+                <div className="bg-theme-surface p-3.5 rounded-xl border border-gray-200 flex items-center justify-between text-xs sm:text-sm">
                   <div className="flex items-center space-x-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#B8860B]"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-primary"></span>
                     <span className="text-slate-700 font-semibold">Capital Appreciation:</span>
                   </div>
-                  <span className="font-extrabold text-slate-900">+{formatPkr(projectedAppreciation)}</span>
+                  <span className="font-extrabold text-theme-heading">+{formatPkr(projectedAppreciation)}</span>
                 </div>
 
-                <div className="bg-[#F8F9FA] p-3.5 rounded-xl border border-gray-200 flex items-center justify-between text-xs sm:text-sm">
+                <div className="bg-theme-surface p-3.5 rounded-xl border border-gray-200 flex items-center justify-between text-xs sm:text-sm">
                   <div className="flex items-center space-x-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
                     <span className="text-slate-700 font-semibold">Rental Dividends:</span>
@@ -213,7 +213,7 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
                   <span className="font-extrabold text-emerald-600">+{formatPkr(projectedRental)}</span>
                 </div>
 
-                <div className="bg-[#F8F9FA] p-3.5 rounded-xl border border-gray-200 flex items-center justify-between text-xs sm:text-sm">
+                <div className="bg-theme-surface p-3.5 rounded-xl border border-gray-200 flex items-center justify-between text-xs sm:text-sm">
                   <div className="flex items-center space-x-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
                     <span className="text-slate-700 font-semibold">Initial Capital:</span>
@@ -226,7 +226,7 @@ export default function RoiCalculator({ onOpenBooking }: RoiCalculatorProps) {
               <div className="pt-3 space-y-3">
                 <button
                   onClick={onOpenBooking}
-                  className="w-full py-4 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white font-extrabold uppercase tracking-wider text-xs sm:text-sm hover:brightness-105 active:scale-[0.99] transition-all shadow-md flex items-center justify-center space-x-2 cursor-pointer"
+                  className="w-full py-4 rounded-xl bg-primary hover:bg-primary-hover text-white font-extrabold uppercase tracking-wider text-xs sm:text-sm hover:brightness-105 active:scale-[0.99] transition-all shadow-md flex items-center justify-center space-x-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Lock In This Investment Plan</span>

@@ -50,12 +50,12 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-2 shrink-0 lg:max-w-xs"
           >
-            <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#B8860B]">
+            <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
               WHY CHOOSE GALAXY MARKETING
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-theme-heading tracking-tight leading-[1.15]">
               A Smarter Way<br />
-              to <span className="text-[#B8860B]">Invest</span>
+              to <span className="text-primary">Invest</span>
             </h2>
           </motion.div>
 
@@ -76,11 +76,11 @@ export default function WhyChooseUs() {
                     whileHover={{ y: -8, scale: 1.08 }}
                     whileTap={{ scale: 0.94 }}
                     transition={{ type: 'spring', stiffness: 350, damping: 18 }}
-                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#F8F9FA] border border-gray-200 flex items-center justify-center text-[#B8860B] group-hover:bg-amber-50 group-hover:border-[#B8860B] shadow-sm transition-colors duration-300"
+                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-theme-surface border border-gray-200 flex items-center justify-center text-primary group-hover:bg-primary-light group-hover:border-primary shadow-sm transition-colors duration-300"
                   >
                     <IconComponent className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-300 group-hover:scale-110" />
                   </motion.div>
-                  <span className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#B8860B] transition-colors">
+                  <span className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-primary transition-colors">
                     {item.title}
                   </span>
                 </motion.div>

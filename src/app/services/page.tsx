@@ -23,15 +23,15 @@ export default function ServicesPage() {
   const getIcon = (name: string) => {
     switch (name) {
       case 'Compass':
-        return <Compass className="w-5 h-5 text-[#B8860B]" />;
+        return <Compass className="w-5 h-5 text-primary" />;
       case 'TrendingUp':
-        return <TrendingUp className="w-5 h-5 text-[#B8860B]" />;
+        return <TrendingUp className="w-5 h-5 text-primary" />;
       case 'BadgePercent':
-        return <BadgePercent className="w-5 h-5 text-[#B8860B]" />;
+        return <BadgePercent className="w-5 h-5 text-primary" />;
       case 'Globe':
-        return <Globe className="w-5 h-5 text-[#B8860B]" />;
+        return <Globe className="w-5 h-5 text-primary" />;
       default:
-        return <Compass className="w-5 h-5 text-[#B8860B]" />;
+        return <Compass className="w-5 h-5 text-primary" />;
     }
   };
 
@@ -59,7 +59,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9] pt-24 sm:pt-28 pb-16 text-slate-900">
+    <div className="min-h-screen bg-theme-bg pt-24 sm:pt-28 pb-16 text-theme-heading">
       
       {/* Header (Screen-Fit & Compact) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10">
@@ -69,13 +69,13 @@ export default function ServicesPage() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto space-y-3"
         >
-          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-[#B8860B] font-bold bg-amber-50 border border-amber-200/80 px-4 py-1.5 rounded-full shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#B8860B]" />
+          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-primary font-bold bg-primary-light border border-primary-border px-4 py-1.5 rounded-full shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-primary" />
             <span>Advisory & Developer Solutions</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Institutional <span className="text-[#B8860B]">Real Estate Services</span>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-theme-heading tracking-tight leading-tight">
+            Institutional <span className="text-primary">Real Estate Services</span>
           </h1>
 
           <p className="text-slate-600 text-xs sm:text-sm font-normal max-w-2xl mx-auto leading-relaxed">
@@ -103,21 +103,21 @@ export default function ServicesPage() {
               <div className="w-full lg:w-1/2 space-y-4">
                 {/* Pillar Badge & Icon */}
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center justify-center text-[#B8860B] shadow-sm shrink-0">
+                  <div className="w-10 h-10 rounded-2xl bg-primary-light border border-primary-border flex items-center justify-center text-primary shadow-sm shrink-0">
                     {getIcon(srv.iconName)}
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#B8860B] block">
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-primary block">
                       Core Discipline #{srv.number}
                     </span>
-                    <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 group-hover:text-[#B8860B] transition-colors leading-tight">
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-theme-heading group-hover:text-primary transition-colors leading-tight">
                       {srv.title}
                     </h2>
                   </div>
                 </div>
 
                 {/* Subtitle */}
-                <p className="text-xs sm:text-sm font-semibold text-[#B8860B]">
+                <p className="text-xs sm:text-sm font-semibold text-primary">
                   {srv.subtitle}
                 </p>
 
@@ -142,7 +142,7 @@ export default function ServicesPage() {
                     onClick={() => openBooking(srv.title)}
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
-                    className="btn-gold-shimmer px-6 py-3 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white text-xs font-bold transition-all shadow-md flex items-center space-x-2 cursor-pointer"
+                    className="px-6 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all shadow-md flex items-center space-x-2 cursor-pointer"
                   >
                     <span>Request Specialized Briefing</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -162,8 +162,8 @@ export default function ServicesPage() {
                 
                 {/* Bottom Frosted Inset Badge */}
                 <div className="absolute bottom-3 left-3 right-3 bg-white/95 p-3.5 rounded-xl border border-gray-200 backdrop-blur-md text-xs text-slate-800 flex items-center justify-between shadow-sm">
-                  <span className="font-semibold text-slate-900">Galaxy Corporate Advisory</span>
-                  <span className="text-[11px] text-[#B8860B] font-extrabold bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">
+                  <span className="font-semibold text-theme-heading">Galaxy Corporate Advisory</span>
+                  <span className="text-[11px] text-primary font-extrabold bg-primary-light px-2.5 py-1 rounded-lg border border-primary-border">
                     Pillar {srv.number} Mandate
                   </span>
                 </div>
@@ -176,8 +176,8 @@ export default function ServicesPage() {
       {/* 4-Step Acquisition Protocol (Screen Fit Compact Layout) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
         <div className="text-center max-w-xl mx-auto mb-6 sm:mb-8 space-y-1.5">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Our 4-Stage <span className="text-[#B8860B]">Acquisition Protocol</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-theme-heading tracking-tight">
+            Our 4-Stage <span className="text-primary">Acquisition Protocol</span>
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
             How we protect and compound your real estate capital from day one.
@@ -193,12 +193,12 @@ export default function ServicesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
               whileHover={{ y: -4 }}
-              className="bg-white border border-gray-200 rounded-2xl p-5 space-y-2 group hover:border-[#B8860B] hover:shadow-md transition-all shadow-sm"
+              className="bg-white border border-gray-200 rounded-2xl p-5 space-y-2 group hover:border-primary hover:shadow-md transition-all shadow-sm"
             >
-              <div className="text-2xl font-extrabold text-[#B8860B]">
+              <div className="text-2xl font-extrabold text-primary">
                 {st.step}
               </div>
-              <h3 className="text-sm sm:text-base font-bold text-slate-900">
+              <h3 className="text-sm sm:text-base font-bold text-theme-heading">
                 {st.title}
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-normal">
@@ -215,9 +215,9 @@ export default function ServicesPage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white border border-amber-300 rounded-3xl p-6 sm:p-8 shadow-md space-y-4"
+          className="bg-white border border-primary-border rounded-3xl p-6 sm:p-8 shadow-md space-y-4"
         >
-          <h3 className="text-xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h3 className="text-xl sm:text-3xl font-extrabold text-theme-heading tracking-tight">
             Looking for Institutional Real Estate Advisory?
           </h3>
           <p className="text-slate-600 text-xs sm:text-sm max-w-lg mx-auto leading-relaxed">
@@ -226,7 +226,7 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <button
               onClick={() => openBooking('Corporate Real Estate Advisory')}
-              className="btn-gold-shimmer px-6 py-3 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white font-bold uppercase tracking-wider text-xs active:scale-95 transition-all shadow-md cursor-pointer"
+              className="px-6 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold uppercase tracking-wider text-xs active:scale-95 transition-all shadow-md cursor-pointer"
             >
               Schedule Advisory Call
             </button>

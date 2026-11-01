@@ -175,15 +175,15 @@ export default function GalaxyChatBot() {
       {isOpen && (
         <div className="fixed bottom-20 right-4 sm:right-6 z-50 w-[94vw] sm:w-[390px] max-h-[560px] h-[450px] flex flex-col bg-white border border-gray-200 rounded-3xl shadow-2xl backdrop-blur-2xl overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-300">
           {/* Header */}
-          <div className="p-4 bg-[#F8F9FA] border-b border-gray-200 flex items-center justify-between">
+          <div className="p-4 bg-theme-surface border-b border-gray-200 flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center shadow-sm">
-                <Sparkles className="w-5 h-5 text-[#B8860B]" />
+              <div className="w-10 h-10 rounded-xl bg-primary-light border border-primary-border flex items-center justify-center shadow-sm">
+                <Sparkles className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h3 className="text-sm font-bold text-slate-900 flex items-center space-x-2">
+                <h3 className="text-sm font-bold text-theme-heading flex items-center space-x-2">
                   <span>Galaxy Property Concierge</span>
-                  <span className="px-1.5 py-0.5 rounded text-[9px] bg-amber-100 text-[#B8860B] font-bold border border-amber-200">AI</span>
+                  <span className="px-1.5 py-0.5 rounded text-[9px] bg-primary-light text-primary font-bold border border-primary-border">AI</span>
                 </h3>
                 <p className="text-[11px] text-emerald-700 font-semibold flex items-center">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
@@ -210,8 +210,8 @@ export default function GalaxyChatBot() {
                 <div
                   className={`max-w-[85%] rounded-2xl px-4 py-3 leading-relaxed shadow-sm ${
                     msg.sender === 'user'
-                      ? 'bg-[#B8860B] text-white font-medium rounded-br-none'
-                      : 'bg-[#F8F9FA] text-slate-800 border border-gray-200 rounded-bl-none'
+                      ? 'bg-primary text-white font-medium rounded-br-none'
+                      : 'bg-theme-surface text-slate-800 border border-gray-200 rounded-bl-none'
                   }`}
                 >
                   <p>{msg.text}</p>
@@ -225,10 +225,10 @@ export default function GalaxyChatBot() {
                       <button
                         key={idx}
                         onClick={() => handleActionClick(act.action)}
-                        className="text-[11px] px-2.5 py-1.5 rounded-lg bg-amber-50/70 border border-amber-200 text-[#B8860B] hover:bg-amber-100 hover:border-amber-300 transition-all text-left flex items-center space-x-1 font-medium"
+                        className="text-[11px] px-2.5 py-1.5 rounded-lg bg-primary-light border border-primary-border text-primary hover:opacity-80 transition-all text-left flex items-center space-x-1 font-medium"
                       >
                         <span>{act.label}</span>
-                        <ChevronRight className="w-3 h-3 text-[#B8860B]" />
+                        <ChevronRight className="w-3 h-3 text-primary" />
                       </button>
                     ))}
                   </div>
@@ -238,18 +238,18 @@ export default function GalaxyChatBot() {
 
             {isTyping && (
               <div className="flex items-center space-x-2 bg-gray-100 border border-gray-200 px-3 py-2 rounded-xl text-slate-500 w-fit">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B8860B] animate-bounce"></span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B8860B] animate-bounce [animation-delay:0.2s]"></span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B8860B] animate-bounce [animation-delay:0.4s]"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce [animation-delay:0.2s]"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce [animation-delay:0.4s]"></span>
               </div>
             )}
             <div ref={messagesEndRef} />
           </div>
 
           {/* Quick Consultation Ribbon */}
-          <div className="bg-[#F8F9FA] px-3 py-1.5 border-t border-gray-200 text-[10px] text-slate-500 flex items-center justify-between">
+          <div className="bg-theme-surface px-3 py-1.5 border-t border-gray-200 text-[10px] text-slate-500 flex items-center justify-between">
             <span className="flex items-center space-x-1">
-              <PhoneCall className="w-3 h-3 text-[#B8860B]" />
+              <PhoneCall className="w-3 h-3 text-primary" />
               <span>Toll Free: 1800.899.900</span>
             </span>
             <a
@@ -275,12 +275,12 @@ export default function GalaxyChatBot() {
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               placeholder="Ask about Murree plots, ROI, or booking..."
-              className="flex-1 bg-[#F8F9FA] border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder-gray-400 focus:outline-none focus:border-[#B8860B] focus:bg-white"
+              className="flex-1 bg-theme-surface border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-theme-heading placeholder-gray-400 focus:outline-none focus:border-primary focus:bg-white"
             />
             <button
               type="submit"
               disabled={!inputMessage.trim()}
-              className="p-2.5 rounded-xl bg-[#B8860B] text-white font-bold disabled:opacity-40 hover:bg-[#996515] transition-all shadow-sm"
+              className="p-2.5 rounded-xl bg-primary text-white font-bold disabled:opacity-40 hover:bg-primary-hover transition-all shadow-sm"
             >
               <Send className="w-4 h-4" />
             </button>

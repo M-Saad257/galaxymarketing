@@ -21,11 +21,11 @@ export default function LeadershipSection() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-1.5"
           >
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#B8860B]">
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
               OUR TEAM
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
-              The Experts Behind Your <span className="text-[#B8860B]">Success</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-theme-heading tracking-tight">
+              The Experts Behind Your <span className="text-primary">Success</span>
             </h2>
           </motion.div>
 
@@ -43,10 +43,10 @@ export default function LeadershipSection() {
             >
               <Link
                 href="/about"
-                className="px-5 py-2.5 rounded-full border border-gray-300 bg-white text-slate-700 hover:text-[#B8860B] hover:border-[#B8860B] text-xs font-semibold flex items-center space-x-2 transition-all shadow-sm group"
+                className="px-5 py-2.5 rounded-full border border-gray-300 bg-white text-slate-700 hover:text-primary hover:border-primary text-xs font-semibold flex items-center space-x-2 transition-all shadow-sm group"
               >
                 <span>View All Team</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#B8860B] transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-3.5 h-3.5 text-primary transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </motion.div>
           </motion.div>
@@ -62,7 +62,7 @@ export default function LeadershipSection() {
               viewport={{ once: true, margin: '-30px' }}
               transition={{ duration: 0.55, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -7 }}
-              className="group bg-[#F8F9FA] rounded-2xl overflow-hidden border border-gray-200/80 hover:border-[#B8860B] hover:shadow-xl transition-all duration-300 shadow-sm flex flex-col justify-between cursor-pointer"
+              className="group bg-theme-surface rounded-2xl overflow-hidden border border-gray-200/80 hover:border-primary hover:shadow-xl transition-all duration-300 shadow-sm flex flex-col justify-between cursor-pointer"
             >
               {/* Photo */}
               <div className="relative h-44 sm:h-56 w-full overflow-hidden bg-gray-100">
@@ -76,7 +76,7 @@ export default function LeadershipSection() {
 
               {/* Text Info */}
               <div className="p-3.5 text-left bg-white border-t border-gray-100">
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#B8860B] transition-colors truncate">
+                <h3 className="text-sm sm:text-base font-bold text-theme-heading group-hover:text-primary transition-colors truncate">
                   {member.name}
                 </h3>
                 <p className="text-xs text-slate-500 mt-0.5 truncate font-medium">

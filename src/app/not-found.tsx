@@ -3,16 +3,16 @@ import { ArrowLeft, Home, Building2 } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[#FAFAF9] text-slate-900 flex flex-col items-center justify-center px-4 py-20 text-center">
-      <div className="w-16 h-16 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center justify-center text-[#B8860B] mb-6 shadow-md">
+    <div className="min-h-screen bg-theme-bg text-theme-heading flex flex-col items-center justify-center px-4 py-20 text-center">
+      <div className="w-16 h-16 rounded-2xl bg-primary-light border border-primary-border flex items-center justify-center text-primary mb-6 shadow-md">
         <Building2 className="w-8 h-8" />
       </div>
 
-      <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#B8860B] mb-2">
+      <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-primary mb-2">
         404 • Page Not Found
       </div>
 
-      <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+      <h1 className="text-3xl sm:text-5xl font-extrabold text-theme-heading tracking-tight mb-4">
         Destination Not Found
       </h1>
 
@@ -22,7 +22,7 @@ export default function NotFound() {
 
       <Link
         href="/"
-        className="px-6 py-3 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white font-bold text-xs uppercase tracking-wider inline-flex items-center space-x-2 transition-all shadow-md cursor-pointer"
+        className="px-6 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs uppercase tracking-wider inline-flex items-center space-x-2 transition-all shadow-md cursor-pointer"
       >
         <Home className="w-4 h-4" />
         <span>Return to Homepage</span>

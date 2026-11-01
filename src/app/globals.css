@@ -1,13 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-cinzel: 'Cinzel', Georgia, serif;
-  --font-outfit: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-playfair: 'Playfair Display', Georgia, serif;
+:root, [data-theme='sapphire'] {
+  /* Default: New Royal Sapphire & Ocean Luxe Theme */
+  --primary: #2563EB;
+  --primary-hover: #1D4ED8;
+  --primary-light: #EFF6FF;
+  --primary-border: #BFDBFE;
+  --primary-text: #1E40AF;
+  --secondary: #0284C7;
+  --theme-bg: #F8FAFC;
+  --theme-surface: #F1F5F9;
+  --theme-card: #FFFFFF;
+  --theme-heading: #0F172A;
+  --theme-body: #334155;
+  --theme-muted: #64748B;
+  --theme-border: #E2E8F0;
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+[data-theme='gold-classic'] {
+  /* Saved Original Theme: Imperial Gold & Warm Stone */
+  --primary: #B8860B;
+  --primary-hover: #996515;
+  --primary-light: #FFFBEB;
+  --primary-border: #FDE68A;
+  --primary-text: #92400E;
+  --secondary: #D4AF37;
+  --theme-bg: #FAFAF9;
+  --theme-surface: #F8F9FA;
+  --theme-card: #FFFFFF;
+  --theme-heading: #0F172A;
+  --theme-body: #475569;
+  --theme-muted: #64748B;
+  --theme-border: #E5E7EB;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Cinzel', Georgia, serif;
+}
+
+[data-theme='emerald'] {
+  /* Alpine Emerald Edition */
+  --primary: #059669;
+  --primary-hover: #047857;
+  --primary-light: #ECFDF5;
+  --primary-border: #A7F3D0;
+  --primary-text: #065F46;
+  --secondary: #10B981;
+  --theme-bg: #F4F7F5;
+  --theme-surface: #EBF2EE;
+  --theme-card: #FFFFFF;
+  --theme-heading: #062822;
+  --theme-body: #1F2937;
+  --theme-muted: #4B5563;
+  --theme-border: #D1D5DB;
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
 }
 
 * {
@@ -20,34 +71,35 @@ html {
 }
 
 body {
-  background-color: #FAFAF9;
-  color: #0F172A;
-  font-family: var(--font-outfit);
+  background-color: var(--theme-bg);
+  color: var(--theme-body);
+  font-family: var(--font-sans);
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ::selection {
-  background: #C59B27;
+  background: var(--primary);
   color: #FFFFFF;
 }
 
-/* Luxury Custom Scrollbar (Light Theme) */
+/* Luxury Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: var(--theme-surface);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #C59B27 0%, #996515 100%);
+  background: var(--primary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #D4AF37 0%, #B8860B 100%);
+  background: var(--primary-hover);
 }
 
 /* Light Luxury Glassmorphism */

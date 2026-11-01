@@ -41,13 +41,13 @@ export default function BlogPostDetailPage() {
   };
 
   return (
-    <article className="min-h-screen bg-[#FAFAF9] pt-24 sm:pt-28 pb-20 text-slate-900">
+    <article className="min-h-screen bg-theme-bg pt-24 sm:pt-28 pb-20 text-theme-heading">
       
       {/* Top Breadcrumb & Back Link */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
         <Link 
           href="/blog"
-          className="inline-flex items-center space-x-2 text-xs font-bold text-slate-600 hover:text-[#B8860B] transition-colors"
+          className="inline-flex items-center space-x-2 text-xs font-bold text-slate-600 hover:text-primary transition-colors"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Back to All Guides</span>
@@ -58,7 +58,7 @@ export default function BlogPostDetailPage() {
       <header className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 space-y-4">
         <div className="flex flex-wrap items-center gap-3">
           {/* Date Tag */}
-          <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#B8860B] text-xs font-bold">
+          <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-primary-light border border-primary-border text-primary text-xs font-bold">
             <Calendar className="w-3.5 h-3.5" />
             <span>{post.date}</span>
           </div>
@@ -73,12 +73,12 @@ export default function BlogPostDetailPage() {
           </span>
         </div>
 
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-theme-heading tracking-tight leading-[1.15]">
           {post.title}
         </h1>
 
         {post.subtitle && (
-          <p className="text-base sm:text-lg text-[#B8860B] font-semibold">
+          <p className="text-base sm:text-lg text-primary font-semibold">
             {post.subtitle}
           </p>
         )}
@@ -86,18 +86,18 @@ export default function BlogPostDetailPage() {
         {/* Author & Share Bar */}
         <div className="flex items-center justify-between pt-4 border-t border-gray-200/80 text-xs">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-[#B8860B] text-white flex items-center justify-center font-bold">
+            <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">
               GM
             </div>
             <div>
-              <span className="font-bold text-slate-900 block">{post.author}</span>
+              <span className="font-bold text-theme-heading block">{post.author}</span>
               <span className="text-slate-500">Corporate Advisory Bureau</span>
             </div>
           </div>
 
           <button
             onClick={handleShare}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-[#B8860B] hover:text-[#B8860B] text-slate-600 transition-colors cursor-pointer text-xs font-semibold"
+            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-primary hover:text-primary text-slate-600 transition-colors cursor-pointer text-xs font-semibold"
           >
             <Share2 className="w-3.5 h-3.5" />
             <span>Share</span>
@@ -118,7 +118,7 @@ export default function BlogPostDetailPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-medium flex items-center justify-between">
             <span>Murree Hills Real Estate Investment Portfolio</span>
-            <span className="bg-[#B8860B] px-2.5 py-0.5 rounded-full font-bold">Verified Research</span>
+            <span className="bg-primary px-2.5 py-0.5 rounded-full font-bold">Verified Research</span>
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@ export default function BlogPostDetailPage() {
         
         {/* Introduction */}
         <div className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-          <h2 className="text-xs uppercase font-bold tracking-widest text-[#B8860B] mb-2">
+          <h2 className="text-xs uppercase font-bold tracking-widest text-primary mb-2">
             Introduction
           </h2>
           <p className="text-base sm:text-lg text-slate-800 leading-relaxed font-normal">
@@ -143,11 +143,11 @@ export default function BlogPostDetailPage() {
             className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-5"
           >
             <div className="space-y-1">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-theme-heading tracking-tight">
                 {section.heading}
               </h2>
               {section.subheading && (
-                <p className="text-sm font-semibold text-[#B8860B]">
+                <p className="text-sm font-semibold text-primary">
                   {section.subheading}
                 </p>
               )}
@@ -232,15 +232,15 @@ export default function BlogPostDetailPage() {
 
         {/* Pro Tips Box */}
         {post.content.proTips && (
-          <div className="bg-amber-50/70 border border-amber-300 rounded-3xl p-6 sm:p-8 space-y-4">
-            <div className="flex items-center space-x-2 text-[#B8860B] font-bold text-sm uppercase tracking-wider">
+          <div className="bg-primary-light border border-primary-border rounded-3xl p-6 sm:p-8 space-y-4">
+            <div className="flex items-center space-x-2 text-primary font-bold text-sm uppercase tracking-wider">
               <Sparkles className="w-4 h-4" />
               <span>Pro Tips for Safe Investment</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-800">
               {post.content.proTips.map((tip, idx) => (
-                <div key={idx} className="flex items-start space-x-2 bg-white/90 p-3 rounded-xl border border-amber-200/80">
-                  <span className="text-[#B8860B] font-bold">✔</span>
+                <div key={idx} className="flex items-start space-x-2 bg-white/90 p-3 rounded-xl border border-primary-border">
+                  <span className="text-primary font-bold">✔</span>
                   <span>{tip}</span>
                 </div>
               ))}
@@ -250,7 +250,7 @@ export default function BlogPostDetailPage() {
 
         {/* Final Thoughts */}
         <div className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-3">
-          <h2 className="text-xs uppercase font-bold tracking-widest text-[#B8860B]">
+          <h2 className="text-xs uppercase font-bold tracking-widest text-primary">
             Final Thoughts
           </h2>
           <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
@@ -314,7 +314,7 @@ export default function BlogPostDetailPage() {
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <button
               onClick={() => openBooking(`Consultation: ${post.title}`)}
-              className="btn-gold-shimmer px-7 py-3.5 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white font-bold text-xs sm:text-sm flex items-center space-x-2 transition-all shadow-md cursor-pointer"
+              className="px-7 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs sm:text-sm flex items-center space-x-2 transition-all shadow-md cursor-pointer"
             >
               <Send className="w-4 h-4" />
               <span>Send Us Message</span>

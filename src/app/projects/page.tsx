@@ -42,17 +42,17 @@ export default function ProjectsPage() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9] pt-28 pb-20">
+    <div className="min-h-screen bg-theme-bg pt-28 pb-20 text-theme-heading">
       {/* Header Banner */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-[#B8860B] font-bold bg-amber-50 border border-amber-200/80 px-4 py-1.5 rounded-full shadow-sm">
+          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-primary font-bold bg-primary-light border border-primary-border px-4 py-1.5 rounded-full shadow-sm">
             <Building2 className="w-3.5 h-3.5" />
             <span>Official Galaxy Marketing Portfolio</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight">
-            Curated <span className="text-[#B8860B]">Real Estate Assets</span>
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-theme-heading tracking-tight">
+            Curated <span className="text-primary">Real Estate Assets</span>
           </h1>
 
           <p className="text-slate-600 text-sm sm:text-base font-normal leading-relaxed">
@@ -63,13 +63,13 @@ export default function ProjectsPage() {
         {/* Search & Category Filter Toolbar */}
         <div className="mt-10 bg-white border border-gray-200 rounded-3xl p-4 shadow-sm flex flex-col md:flex-row gap-4 items-center justify-between">
           <div className="relative w-full md:w-80">
-            <Search className="w-4 h-4 text-[#B8860B] absolute left-3.5 top-3.5" />
+            <Search className="w-4 h-4 text-primary absolute left-3.5 top-3.5" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by project, city, or area..."
-              className="w-full bg-[#F8F9FA] border border-gray-200 rounded-xl pl-10 pr-4 py-2.5 text-xs text-slate-900 placeholder-gray-400 focus:outline-none focus:border-[#B8860B] focus:bg-white transition-colors"
+              className="w-full bg-theme-surface border border-gray-200 rounded-xl pl-10 pr-4 py-2.5 text-xs text-theme-heading placeholder-gray-400 focus:outline-none focus:border-primary focus:bg-white transition-colors"
             />
           </div>
 
@@ -80,8 +80,8 @@ export default function ProjectsPage() {
                 onClick={() => setSelectedCategory(cat.key)}
                 className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                   selectedCategory === cat.key
-                    ? 'bg-[#B8860B] text-white font-bold shadow-sm'
-                    : 'bg-[#F8F9FA] text-slate-600 hover:text-slate-900 border border-gray-200 hover:border-gray-300'
+                    ? 'bg-primary text-white font-bold shadow-sm'
+                    : 'bg-theme-surface text-slate-600 hover:text-slate-900 border border-gray-200 hover:border-gray-300'
                 }`}
               >
                 {cat.label}
@@ -99,7 +99,7 @@ export default function ProjectsPage() {
             <p className="text-slate-500 text-sm">No properties match your current search criteria.</p>
             <button
               onClick={() => { setSearchQuery(''); setSelectedCategory('all'); }}
-              className="mt-4 px-5 py-2.5 rounded-xl bg-[#B8860B] text-white font-bold text-xs"
+              className="mt-4 px-5 py-2.5 rounded-xl bg-primary text-white font-bold text-xs"
             >
               Reset Filters
             </button>
@@ -109,7 +109,7 @@ export default function ProjectsPage() {
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="group bg-white border border-gray-200 hover:border-[#B8860B] rounded-3xl overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1"
+                className="group bg-white border border-gray-200 hover:border-primary rounded-3xl overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1"
               >
                 <div>
                   <div className="relative h-64 w-full overflow-hidden bg-gray-100">
@@ -122,7 +122,7 @@ export default function ProjectsPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
 
                     <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-white/95 text-[#B8860B] border border-amber-200 shadow-sm backdrop-blur-md">
+                      <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-white/95 text-primary border border-primary-border shadow-sm backdrop-blur-md">
                         {project.categoryLabel}
                       </span>
                     </div>
@@ -136,10 +136,10 @@ export default function ProjectsPage() {
 
                     <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-white">
                       <span className="flex items-center space-x-1.5 drop-shadow font-medium">
-                        <MapPin className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+                        <MapPin className="w-3.5 h-3.5 text-primary-border shrink-0" />
                         <span className="truncate">{project.location}</span>
                       </span>
-                      <span className="text-amber-300 font-bold drop-shadow flex items-center space-x-1">
+                      <span className="text-primary-border font-bold drop-shadow flex items-center space-x-1">
                         <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                         <span>{project.nocStatus}</span>
                       </span>
@@ -147,7 +147,7 @@ export default function ProjectsPage() {
                   </div>
 
                   <div className="p-6 space-y-4">
-                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#B8860B] transition-colors">
+                    <h3 className="text-xl font-bold text-theme-heading group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
 
@@ -155,10 +155,10 @@ export default function ProjectsPage() {
                       {project.tagline}
                     </p>
 
-                    <div className="bg-[#F8F9FA] border border-gray-200 rounded-2xl p-3.5 space-y-2 text-xs">
+                    <div className="bg-theme-surface border border-gray-200 rounded-2xl p-3.5 space-y-2 text-xs">
                       <div className="flex items-center justify-between">
                         <span className="text-slate-500">Starting Price:</span>
-                        <span className="font-bold text-[#B8860B] text-sm">{project.priceStarting}</span>
+                        <span className="font-bold text-primary text-sm">{project.priceStarting}</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-slate-500">Payment Plan:</span>
@@ -166,7 +166,7 @@ export default function ProjectsPage() {
                       </div>
                       <div className="flex items-center justify-between pt-1 border-t border-gray-200">
                         <span className="text-slate-500 flex items-center space-x-1">
-                          <TrendingUp className="w-3 h-3 text-[#B8860B]" />
+                          <TrendingUp className="w-3 h-3 text-primary" />
                           <span>Expected Yield:</span>
                         </span>
                         <span className="text-emerald-700 font-bold">{project.expectedRoi}</span>
@@ -182,7 +182,7 @@ export default function ProjectsPage() {
                     }}
                     className="py-2.5 px-3 rounded-xl bg-white border border-gray-300 text-slate-700 hover:text-slate-900 hover:bg-gray-50 text-xs font-semibold flex items-center justify-center space-x-1.5 transition-all shadow-sm"
                   >
-                    <Eye className="w-3.5 h-3.5 text-[#B8860B]" />
+                    <Eye className="w-3.5 h-3.5 text-primary" />
                     <span>Book Inspection</span>
                   </button>
 
@@ -190,7 +190,7 @@ export default function ProjectsPage() {
                     href={`https://api.whatsapp.com/send?phone=+923095550790&text=${encodeURIComponent(`Assalam o Alaikum, I am interested in ${project.title} (${project.priceStarting}). Please share the verified payment plan and brochure.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-2.5 px-3 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white font-bold text-xs flex items-center justify-center space-x-1.5 transition-all shadow-sm"
+                    className="py-2.5 px-3 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs flex items-center justify-center space-x-1.5 transition-all shadow-sm"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>WhatsApp Inquiry</span>

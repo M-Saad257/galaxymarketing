@@ -11,6 +11,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { useBooking } from '@/context/BookingContext';
+import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -74,39 +75,44 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={`transition-colors duration-200 relative group py-1 ${isActive
-                      ? 'text-[#B8860B] font-bold border-b-2 border-[#B8860B]'
-                      : 'text-slate-700 hover:text-[#B8860B]'
+                      ? 'text-primary font-bold border-b-2 border-primary'
+                      : 'text-slate-700 hover:text-primary'
                     }`}
                 >
                   {link.name}
-                  <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-[#B8860B] transition-all duration-300 group-hover:w-full ${isActive ? 'w-full' : ''}`} />
+                  <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full ${isActive ? 'w-full' : ''}`} />
                 </Link>
               );
             })}
           </nav>
 
-          {/* Right Button: Get a Quote */}
-          <div className="hidden sm:flex items-center">
+          {/* Right Area: Theme Switcher + Get a Quote */}
+          <div className="hidden sm:flex items-center space-x-3">
+            <ThemeSwitcher />
+
             <motion.button
               onClick={() => openBooking()}
               whileHover={{ scale: 1.04, y: -1 }}
               whileTap={{ scale: 0.96 }}
               transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-              className="btn-gold-shimmer px-5 py-2.5 rounded-full bg-[#B8860B] hover:bg-[#996515] text-white font-bold text-xs tracking-wide transition-all duration-300 flex items-center space-x-2 shadow-sm cursor-pointer group"
+              className="btn-gold-shimmer px-5 py-2.5 rounded-full bg-primary hover:bg-primary-hover text-white font-bold text-xs tracking-wide transition-all duration-300 flex items-center space-x-2 shadow-sm cursor-pointer group"
             >
               <span>Get a Quote</span>
               <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
             </motion.button>
           </div>
 
-          {/* Mobile Hamburger Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-gray-100 border border-gray-200 transition-colors"
-            aria-label="Toggle navigation menu"
-          >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          {/* Mobile Right Controls */}
+          <div className="flex sm:hidden items-center space-x-2">
+            <ThemeSwitcher />
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-xl text-slate-800 hover:bg-gray-100 border border-gray-200 transition-colors"
+              aria-label="Toggle navigation menu"
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -120,8 +126,8 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`text-sm font-semibold transition-colors ${pathname === link.href
-                    ? 'text-[#B8860B]'
-                    : 'text-slate-700 hover:text-[#B8860B]'
+                    ? 'text-primary'
+                    : 'text-slate-700 hover:text-primary'
                   }`}
               >
                 {link.name}
@@ -134,7 +140,7 @@ export default function Navbar() {
                   openBooking();
                 }}
                 whileTap={{ scale: 0.96 }}
-                className="w-full py-2.5 rounded-xl bg-[#B8860B] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-sm"
+                className="w-full py-2.5 rounded-xl bg-primary text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-sm"
               >
                 <span>Get a Quote</span>
                 <ArrowRight className="w-4 h-4" />

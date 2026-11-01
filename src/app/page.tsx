@@ -11,7 +11,7 @@ import ContactSection from '@/components/ContactSection';
 
 export default function HomePage() {
   return (
-    <div className="relative bg-[#FAFAF9] text-slate-900">
+    <div className="relative bg-theme-bg text-theme-heading">
       {/* 01. Hero Section */}
       <div id="hero">
         <HeroSlider />

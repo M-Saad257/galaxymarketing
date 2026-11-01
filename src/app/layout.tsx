@@ -61,7 +61,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#FAFAF9] text-[#0F172A] antialiased selection:bg-[#C59B27] selection:text-white">
+      <body className="bg-theme-bg text-theme-heading antialiased selection:bg-primary selection:text-white">
         <ClientLayoutProvider>
           {children}
         </ClientLayoutProvider>

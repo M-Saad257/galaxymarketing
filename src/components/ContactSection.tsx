@@ -33,9 +33,9 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact-section" className="w-full py-12 sm:py-16 bg-[#F8F9FA] border-b border-gray-200 relative overflow-hidden flex items-center">
+    <section id="contact-section" className="w-full py-12 sm:py-16 bg-theme-surface border-b border-gray-200 relative overflow-hidden flex items-center">
       {/* Subtle background glow */}
-      <div className="absolute top-1/2 right-10 w-96 h-96 bg-amber-400/5 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute top-1/2 right-10 w-96 h-96 bg-primary/5 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
@@ -49,12 +49,12 @@ export default function ContactSection() {
             className="lg:col-span-6 space-y-6"
           >
             <div className="space-y-1.5">
-              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#B8860B]">
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
                 GET IN TOUCH
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-theme-heading tracking-tight leading-[1.15]">
                 Let’s Discuss<br />
-                Your Next <span className="text-[#B8860B]">Investment</span>
+                Your Next <span className="text-primary">Investment</span>
               </h2>
               <p className="text-slate-600 text-sm font-normal max-w-md pt-1">
                 We warmly welcome you to reach out to us at your convenience.
@@ -72,7 +72,7 @@ export default function ContactSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Your Full Name *"
-                      className="w-full bg-white border border-gray-300 focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-gray-400 focus:outline-none shadow-sm transition-all"
+                      className="w-full bg-white border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary rounded-xl px-4 py-3 text-sm text-theme-heading placeholder-gray-400 focus:outline-none shadow-sm transition-all"
                     />
                   </div>
                   <div>
@@ -82,7 +82,7 @@ export default function ContactSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="Phone / WhatsApp *"
-                      className="w-full bg-white border border-gray-300 focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-gray-400 focus:outline-none shadow-sm transition-all"
+                      className="w-full bg-white border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary rounded-xl px-4 py-3 text-sm text-theme-heading placeholder-gray-400 focus:outline-none shadow-sm transition-all"
                     />
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Brief Message (e.g. interested in Murree plots or commercial towers)..."
-                    className="w-full bg-white border border-gray-300 focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-gray-400 focus:outline-none shadow-sm transition-all resize-none"
+                    className="w-full bg-white border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary rounded-xl px-4 py-3 text-sm text-theme-heading placeholder-gray-400 focus:outline-none shadow-sm transition-all resize-none"
                   />
                 </div>
 
@@ -104,7 +104,7 @@ export default function ContactSection() {
                     whileHover={{ scale: 1.03, y: -2 }}
                     whileTap={{ scale: 0.96 }}
                     transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                    className="btn-gold-shimmer px-6 py-3.5 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center space-x-2 transition-all shadow-md cursor-pointer group"
+                    className="px-6 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center space-x-2 transition-all shadow-md cursor-pointer group"
                   >
                     <span>Contact Us Now</span>
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -128,18 +128,18 @@ export default function ContactSection() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4 }}
-                className="p-6 rounded-2xl bg-white border border-amber-300 shadow-md space-y-3 max-w-lg"
+                className="p-6 rounded-2xl bg-white border border-primary-border shadow-md space-y-3 max-w-lg"
               >
                 <div className="flex items-center space-x-3 text-emerald-600">
                   <CheckCircle2 className="w-5 h-5 shrink-0" />
-                  <span className="font-bold text-slate-900 text-base">Inquiry Sent Successfully</span>
+                  <span className="font-bold text-theme-heading text-base">Inquiry Sent Successfully</span>
                 </div>
                 <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                  Thank you, <strong className="text-[#B8860B]">{formData.name}</strong>. Our senior investment advisor will reach out to you shortly at <strong className="text-slate-900">{formData.phone}</strong>.
+                  Thank you, <strong className="text-primary">{formData.name}</strong>. Our senior investment advisor will reach out to you shortly at <strong className="text-theme-heading">{formData.phone}</strong>.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="text-xs text-[#B8860B] hover:underline font-bold"
+                  className="text-xs text-primary hover:underline font-bold"
                 >
                   ← Send another message
                 </button>
@@ -174,7 +174,7 @@ export default function ContactSection() {
                 className="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-gray-200 shadow-xl text-xs text-slate-800 space-y-2.5 transition-transform"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#B8860B]">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-primary">
                     Headquarters Islamabad
                   </span>
                   <span className="text-[10px] text-emerald-700 font-bold flex items-center bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
@@ -183,16 +183,16 @@ export default function ContactSection() {
                   </span>
                 </div>
                 <div className="flex items-start space-x-2 text-[11px] text-slate-700">
-                  <MapPin className="w-3.5 h-3.5 text-[#B8860B] shrink-0 mt-0.5" />
+                  <MapPin className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
                   <span>Office # 8, 2nd Floor, Al-Anayat Mall, G-11 Markaz, Islamabad</span>
                 </div>
                 <div className="flex items-center justify-between text-[11px] text-slate-700 pt-1.5 border-t border-gray-100">
                   <div className="flex items-center space-x-1.5">
-                    <Phone className="w-3.5 h-3.5 text-[#B8860B]" />
+                    <Phone className="w-3.5 h-3.5 text-primary" />
                     <span className="font-semibold">0309-5550790</span>
                   </div>
                   <div className="flex items-center space-x-1.5">
-                    <Mail className="w-3.5 h-3.5 text-[#B8860B]" />
+                    <Mail className="w-3.5 h-3.5 text-primary" />
                     <span>info@galaxymarketing.pk</span>
                   </div>
                 </div>

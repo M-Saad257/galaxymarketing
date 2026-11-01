@@ -8,6 +8,7 @@ import WhatsAppFloatingButton from './WhatsAppFloatingButton';
 import GalaxyChatBot from './GalaxyChatBot';
 import VipBookingModal from './VipBookingModal';
 import { BookingProvider, useBooking } from '@/context/BookingContext';
+import { ThemeProvider } from '@/context/ThemeContext';
 
 function InnerLayout({ children }: { children: React.ReactNode }) {
   const { isBookingOpen, closeBooking, selectedProject, openBooking } = useBooking();
@@ -19,7 +20,7 @@ function InnerLayout({ children }: { children: React.ReactNode }) {
   }, [pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-[#FAFAF9] text-slate-900 selection:bg-[#C59B27] selection:text-white">
+    <div className="min-h-screen flex flex-col justify-between bg-[var(--theme-bg)] text-[var(--theme-heading)] selection:bg-[var(--primary)] selection:text-white transition-colors duration-300">
       <Navbar />
 
       <main className="flex-1">
@@ -50,8 +51,10 @@ export default function ClientLayoutProvider({
   children: React.ReactNode;
 }) {
   return (
-    <BookingProvider>
-      <InnerLayout>{children}</InnerLayout>
-    </BookingProvider>
+    <ThemeProvider>
+      <BookingProvider>
+        <InnerLayout>{children}</InnerLayout>
+      </BookingProvider>
+    </ThemeProvider>
   );
 }

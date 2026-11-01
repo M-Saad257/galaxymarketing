@@ -60,7 +60,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9] pt-24 sm:pt-28 pb-16 text-slate-900">
+    <div className="min-h-screen bg-theme-bg pt-24 sm:pt-28 pb-16 text-theme-heading">
       
       {/* Header (Screen-Fit & Compact) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8">
@@ -70,13 +70,13 @@ export default function ContactPage() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto space-y-2"
         >
-          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-[#B8860B] font-bold bg-amber-50 border border-amber-200/80 px-4 py-1.5 rounded-full shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#B8860B]" />
+          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-primary font-bold bg-primary-light border border-primary-border px-4 py-1.5 rounded-full shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-primary" />
             <span>Connect with Galaxy Marketing</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Contact <span className="text-[#B8860B]">Headquarters</span>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-theme-heading tracking-tight leading-tight">
+            Contact <span className="text-primary">Headquarters</span>
           </h1>
 
           <p className="text-slate-600 text-xs sm:text-sm font-normal max-w-xl mx-auto leading-relaxed">
@@ -98,10 +98,10 @@ export default function ContactPage() {
             {/* Left Column: Office Details (Screen-Fit Proportion) */}
             <div className="lg:col-span-5 space-y-5">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#B8860B] block">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-primary block">
                   Corporate Suites
                 </span>
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+                <h2 className="text-xl sm:text-2xl font-bold text-theme-heading">
                   Islamabad Head Office
                 </h2>
                 <p className="text-xs text-slate-500 mt-1 font-normal">
@@ -111,18 +111,18 @@ export default function ContactPage() {
 
               {/* Details List */}
               <div className="space-y-3.5 text-xs text-slate-700">
-                <div className="flex items-start space-x-3 p-3 rounded-xl bg-[#F8F9FA] border border-gray-100">
-                  <MapPin className="w-4 h-4 text-[#B8860B] shrink-0 mt-0.5" />
+                <div className="flex items-start space-x-3 p-3 rounded-xl bg-theme-surface border border-gray-100">
+                  <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-slate-900 block">Address:</span>
+                    <span className="font-bold text-theme-heading block">Address:</span>
                     <span>Office # 8, First Floor, Al Anayat Mall, G-11 Markaz, Islamabad, Pakistan</span>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-3 p-3 rounded-xl bg-[#F8F9FA] border border-gray-100">
-                  <Clock className="w-4 h-4 text-[#B8860B] shrink-0 mt-0.5" />
+                <div className="flex items-start space-x-3 p-3 rounded-xl bg-theme-surface border border-gray-100">
+                  <Clock className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-slate-900 block">Working Hours:</span>
+                    <span className="font-bold text-theme-heading block">Working Hours:</span>
                     <span>Monday – Friday: 08:00 – 18:00</span>
                     <span className="block text-[11px] text-emerald-700 font-semibold mt-0.5">Saturday: 09:00 – 15:00 (VIP Appointments)</span>
                   </div>
@@ -131,37 +131,37 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   <a 
                     href="tel:03095550790" 
-                    className="flex items-center space-x-2.5 p-3 rounded-xl bg-[#F8F9FA] border border-gray-100 hover:border-[#B8860B] transition-colors group"
+                    className="flex items-center space-x-2.5 p-3 rounded-xl bg-theme-surface border border-gray-100 hover:border-primary transition-colors group"
                   >
-                    <PhoneCall className="w-4 h-4 text-[#B8860B] shrink-0 group-hover:scale-110 transition-transform" />
+                    <PhoneCall className="w-4 h-4 text-primary shrink-0 group-hover:scale-110 transition-transform" />
                     <div>
                       <span className="font-bold text-[10px] text-slate-500 block">Senior Desk</span>
-                      <span className="font-bold text-slate-900 text-xs">0309-5550790</span>
+                      <span className="font-bold text-theme-heading text-xs">0309-5550790</span>
                     </div>
                   </a>
 
                   <a 
                     href="tel:0512756529" 
-                    className="flex items-center space-x-2.5 p-3 rounded-xl bg-[#F8F9FA] border border-gray-100 hover:border-[#B8860B] transition-colors group"
+                    className="flex items-center space-x-2.5 p-3 rounded-xl bg-theme-surface border border-gray-100 hover:border-primary transition-colors group"
                   >
-                    <PhoneCall className="w-4 h-4 text-[#B8860B] shrink-0 group-hover:scale-110 transition-transform" />
+                    <PhoneCall className="w-4 h-4 text-primary shrink-0 group-hover:scale-110 transition-transform" />
                     <div>
                       <span className="font-bold text-[10px] text-slate-500 block">Landline</span>
-                      <span className="font-bold text-slate-900 text-xs">051-2756529</span>
+                      <span className="font-bold text-theme-heading text-xs">051-2756529</span>
                     </div>
                   </a>
                 </div>
 
-                <div className="flex items-center justify-between p-3 rounded-xl bg-[#F8F9FA] border border-gray-100">
+                <div className="flex items-center justify-between p-3 rounded-xl bg-theme-surface border border-gray-100">
                   <div className="flex items-center space-x-2.5">
-                    <Mail className="w-4 h-4 text-[#B8860B] shrink-0" />
-                    <span className="font-bold text-slate-900">info@galaxymarketing.pk</span>
+                    <Mail className="w-4 h-4 text-primary shrink-0" />
+                    <span className="font-bold text-theme-heading">info@galaxymarketing.pk</span>
                   </div>
                   <a
                     href="https://maps.google.com/?q=Al+Anayat+Mall+G-11+Markaz+Islamabad"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[11px] font-bold text-[#B8860B] hover:underline"
+                    className="text-[11px] font-bold text-primary hover:underline"
                   >
                     Google Maps ↗
                   </a>
@@ -170,11 +170,11 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column: Screen-Fit Compact Inquiry Form */}
-            <div className="lg:col-span-7 bg-[#F8F9FA] rounded-2xl p-5 sm:p-6 border border-gray-200/90">
+            <div className="lg:col-span-7 bg-theme-surface rounded-2xl p-5 sm:p-6 border border-gray-200/90">
               {!submitted ? (
                 <div>
                   <div className="mb-4">
-                    <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                    <h3 className="text-lg sm:text-xl font-bold text-theme-heading">
                       Send A Direct Message
                     </h3>
                     <p className="text-xs text-slate-500 mt-0.5">
@@ -192,7 +192,7 @@ export default function ContactPage() {
                           value={formData.Name}
                           onChange={(e) => setFormData({ ...formData, Name: e.target.value })}
                           placeholder="e.g. Asad Farooq"
-                          className="w-full bg-white border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder-gray-400 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all shadow-sm"
+                          className="w-full bg-white border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-theme-heading placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm"
                         />
                       </div>
 
@@ -203,7 +203,7 @@ export default function ContactPage() {
                           value={formData.Email}
                           onChange={(e) => setFormData({ ...formData, Email: e.target.value })}
                           placeholder="asad@example.com"
-                          className="w-full bg-white border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder-gray-400 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all shadow-sm"
+                          className="w-full bg-white border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-theme-heading placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm"
                         />
                       </div>
                     </div>
@@ -217,7 +217,7 @@ export default function ContactPage() {
                           value={formData.MobileNumber}
                           onChange={(e) => setFormData({ ...formData, MobileNumber: e.target.value })}
                           placeholder="0300 0000000"
-                          className="w-full bg-white border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder-gray-400 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all shadow-sm"
+                          className="w-full bg-white border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-theme-heading placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm"
                         />
                       </div>
 
@@ -226,7 +226,7 @@ export default function ContactPage() {
                         <select
                           value={formData.Subject}
                           onChange={(e) => setFormData({ ...formData, Subject: e.target.value })}
-                          className="w-full bg-white border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all shadow-sm"
+                          className="w-full bg-white border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-theme-heading focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm"
                         >
                           <option value="Holiday Hill Park Murree">Holiday Hill Park Murree</option>
                           <option value="Daraaj Tower Islamabad">Daraaj Tower Islamabad</option>
@@ -248,7 +248,7 @@ export default function ContactPage() {
                         value={formData.Message}
                         onChange={(e) => setFormData({ ...formData, Message: e.target.value })}
                         placeholder="Please specify plot sizes, budget bracket, or any legal queries..."
-                        className="w-full bg-white border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder-gray-400 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all shadow-sm resize-none"
+                        className="w-full bg-white border border-gray-300 rounded-xl px-3.5 py-2.5 text-xs text-theme-heading placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm resize-none"
                       />
                     </div>
 
@@ -258,7 +258,7 @@ export default function ContactPage() {
                         type="submit"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        className="btn-gold-shimmer py-3 px-5 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all shadow-md cursor-pointer"
+                        className="py-3 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all shadow-md cursor-pointer"
                       >
                         <Send className="w-3.5 h-3.5" />
                         <span>Submit Inquiry</span>
@@ -279,16 +279,16 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <div className="text-center py-8 space-y-4">
-                  <div className="w-12 h-12 mx-auto rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center shadow-sm">
-                    <CheckCircle2 className="w-6 h-6 text-[#B8860B]" />
+                  <div className="w-12 h-12 mx-auto rounded-full bg-primary-light border border-primary-border flex items-center justify-center shadow-sm">
+                    <CheckCircle2 className="w-6 h-6 text-primary" />
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-1">
+                    <h3 className="text-xl font-bold text-theme-heading mb-1">
                       Message Dispatched Successfully
                     </h3>
                     <p className="text-slate-600 text-xs max-w-sm mx-auto leading-relaxed">
-                      Thank you, <strong className="text-[#B8860B]">{formData.Name}</strong>. Our corporate relationship team will review your inquiry regarding <strong className="text-slate-900">{formData.Subject}</strong> and contact you promptly.
+                      Thank you, <strong className="text-primary">{formData.Name}</strong>. Our corporate relationship team will review your inquiry regarding <strong className="text-theme-heading">{formData.Subject}</strong> and contact you promptly.
                     </p>
                   </div>
 
@@ -297,7 +297,7 @@ export default function ContactPage() {
                       setSubmitted(false);
                       setFormData({ Name: '', Email: '', MobileNumber: '', Subject: 'General Inquiry', Message: '' });
                     }}
-                    className="px-5 py-2 rounded-xl bg-white border border-gray-300 text-slate-800 text-xs font-semibold hover:border-[#B8860B] hover:text-[#B8860B] transition-all shadow-sm"
+                    className="px-5 py-2 rounded-xl bg-white border border-gray-300 text-slate-800 text-xs font-semibold hover:border-primary hover:text-primary transition-all shadow-sm"
                   >
                     Send Another Message
                   </button>
@@ -312,8 +312,8 @@ export default function ContactPage() {
       {/* Frequently Asked Questions (Compact Accordion) */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6 space-y-1">
-          <h2 className="text-2xl font-bold text-slate-900">
-            Frequently Asked <span className="text-[#B8860B]">Questions</span>
+          <h2 className="text-2xl font-bold text-theme-heading">
+            Frequently Asked <span className="text-primary">Questions</span>
           </h2>
           <p className="text-slate-500 text-xs">
             Everything you need to know about investing with Galaxy Marketing.
@@ -330,11 +330,11 @@ export default function ContactPage() {
               >
                 <button
                   onClick={() => setOpenFaq(isOpen ? null : idx)}
-                  className="w-full px-5 py-3.5 text-left flex items-center justify-between text-slate-900 font-bold text-xs sm:text-sm hover:text-[#B8860B] transition-colors cursor-pointer"
+                  className="w-full px-5 py-3.5 text-left flex items-center justify-between text-theme-heading font-bold text-xs sm:text-sm hover:text-primary transition-colors cursor-pointer"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
-                    className={`w-4 h-4 text-[#B8860B] transition-transform duration-300 shrink-0 ml-3 ${
+                    className={`w-4 h-4 text-primary transition-transform duration-300 shrink-0 ml-3 ${
                       isOpen ? 'rotate-180' : ''
                     }`}
                   />

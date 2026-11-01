@@ -102,10 +102,10 @@ export default function TestimonialCarousel() {
     <section 
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="w-full py-16 sm:py-20 lg:py-24 bg-[#F8F9FA] border-b border-gray-200 relative overflow-hidden flex items-center"
+      className="w-full py-16 sm:py-20 lg:py-24 bg-theme-surface border-b border-gray-200 relative overflow-hidden flex items-center"
     >
       {/* Subtle warm glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-amber-400/5 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/5 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -119,12 +119,12 @@ export default function TestimonialCarousel() {
             className="lg:col-span-4 space-y-6"
           >
             <div className="space-y-1.5">
-              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#B8860B]">
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
                 TESTIMONIALS
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-theme-heading tracking-tight leading-[1.15]">
                 What Our<br />
-                <span className="text-[#B8860B]">Clients Say</span>
+                <span className="text-primary">Clients Say</span>
               </h2>
             </div>
 
@@ -136,7 +136,7 @@ export default function TestimonialCarousel() {
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 18 }}
                 aria-label="Previous Testimonial"
-                className="w-11 h-11 rounded-full border border-gray-300 bg-white hover:bg-[#B8860B] hover:text-white hover:border-[#B8860B] text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-sm"
+                className="w-11 h-11 rounded-full border border-gray-300 bg-white hover:bg-primary hover:text-white hover:border-primary text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-sm"
               >
                 <ChevronLeft className="w-5 h-5" />
               </motion.button>
@@ -146,7 +146,7 @@ export default function TestimonialCarousel() {
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 18 }}
                 aria-label="Next Testimonial"
-                className="w-11 h-11 rounded-full border border-gray-300 bg-white hover:bg-[#B8860B] hover:text-white hover:border-[#B8860B] text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-sm"
+                className="w-11 h-11 rounded-full border border-gray-300 bg-white hover:bg-primary hover:text-white hover:border-primary text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-sm"
               >
                 <ChevronRight className="w-5 h-5" />
               </motion.button>
@@ -175,7 +175,7 @@ export default function TestimonialCarousel() {
                   {/* Client Avatar Portrait */}
                   <motion.div 
                     whileHover={{ scale: 1.05 }}
-                    className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-[#B8860B] shadow-md shrink-0 ring-4 ring-amber-100"
+                    className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-primary shadow-md shrink-0 ring-4 ring-primary-border"
                   >
                     <Image
                       src={t.image}
@@ -192,10 +192,10 @@ export default function TestimonialCarousel() {
                     <div className="flex items-center justify-center sm:justify-between">
                       <div className="flex items-center space-x-1">
                         {[...Array(t.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-[#B8860B] text-[#B8860B]" />
+                          <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                         ))}
                       </div>
-                      <span className="text-4xl font-serif text-[#B8860B] leading-none select-none hidden sm:block">
+                      <span className="text-4xl font-serif text-primary leading-none select-none hidden sm:block">
                         “
                       </span>
                     </div>
@@ -206,7 +206,7 @@ export default function TestimonialCarousel() {
 
                     <div className="pt-2 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                       <div>
-                        <div className="text-base sm:text-lg font-bold text-slate-900">
+                        <div className="text-base sm:text-lg font-bold text-theme-heading">
                           {t.name}
                         </div>
                         <div className="text-xs text-slate-500 font-medium">
@@ -224,7 +224,7 @@ export default function TestimonialCarousel() {
                           aria-label={`Go to slide ${idx + 1}`}
                           className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                             idx === currentIndex
-                              ? 'w-6 bg-[#B8860B]'
+                              ? 'w-6 bg-primary'
                               : 'w-2 bg-gray-300 hover:bg-gray-400'
                           }`}
                         />

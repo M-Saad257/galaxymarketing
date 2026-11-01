@@ -10,7 +10,7 @@ export default function HeroSlider() {
   const { openBooking } = useBooking();
 
   return (
-    <section className="relative w-full min-h-[640px] lg:h-screen flex items-center bg-[#FAFAF9] overflow-hidden pt-24 sm:pt-28 pb-16 border-b border-gray-200">
+    <section className="relative w-full min-h-[640px] lg:h-screen flex items-center bg-[var(--theme-bg)] overflow-hidden pt-24 sm:pt-28 pb-16 border-b border-gray-200 transition-colors duration-300">
       
       {/* Background Image: Constant Luxury Cantilever Villa with Luminous Light Overlay */}
       <motion.div 
@@ -26,9 +26,9 @@ export default function HeroSlider() {
           priority
           className="object-cover object-right lg:object-center brightness-[0.95] contrast-[1.05]"
         />
-        {/* Soft Luminous Light Vignette: Pure White on Left for Text, Villa Glowing on Right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FAFAF9] via-[#FAFAF9]/85 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FAFAF9] via-transparent to-white/40"></div>
+        {/* Soft Luminous Light Vignette: Matched to Active Theme Canvas */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--theme-bg)] via-[var(--theme-bg)]/85 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--theme-bg)] via-transparent to-white/40"></div>
       </motion.div>
 
       {/* Main Content Area */}
@@ -37,17 +37,28 @@ export default function HeroSlider() {
           
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-6">
+            
+            {/* Pill Eyebrow Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-primary-light border border-primary-border text-primary text-xs font-bold uppercase tracking-wider backdrop-blur-sm"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-primary" />
+              <span>Capital Investment Partner</span>
+            </motion.div>
 
             {/* Headline with animated slide-up */}
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.08]"
+              className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-theme-heading tracking-tight leading-[1.08]"
             >
               Your Vision.<br />
               Our Expertise.<br />
-              <span className="text-[#B8860B]">Your Future.</span>
+              <span className="text-primary">Your Future.</span>
             </motion.h1>
 
             {/* Subtext */}
@@ -55,7 +66,7 @@ export default function HeroSlider() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="text-slate-600 text-sm sm:text-base font-normal max-w-lg leading-relaxed"
+              className="text-theme-body text-sm sm:text-base font-normal max-w-lg leading-relaxed"
             >
               Discover exceptional property opportunities and invest with confidence through Islamabad's trusted real estate marketing partner.
             </motion.p>
@@ -72,7 +83,7 @@ export default function HeroSlider() {
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.96 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                className="btn-gold-shimmer px-7 py-3.5 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white font-bold text-xs sm:text-sm flex items-center space-x-2 transition-all duration-200 shadow-md shadow-amber-500/20 cursor-pointer group"
+                className="btn-gold-shimmer px-7 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-xs sm:text-sm flex items-center space-x-2 transition-all duration-200 shadow-md cursor-pointer group"
               >
                 <span>Explore Projects</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -83,7 +94,7 @@ export default function HeroSlider() {
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.96 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                className="px-7 py-3.5 rounded-xl bg-white hover:bg-gray-50 hover:border-[#B8860B] hover:text-[#B8860B] text-slate-800 font-bold text-xs sm:text-sm border border-gray-300 transition-all duration-200 cursor-pointer shadow-sm"
+                className="px-7 py-3.5 rounded-xl bg-white hover:bg-gray-50 hover:border-primary hover:text-primary text-theme-heading font-bold text-xs sm:text-sm border border-gray-300 transition-all duration-200 cursor-pointer shadow-sm"
               >
                 Book a Consultation
               </motion.button>
@@ -116,7 +127,7 @@ export default function HeroSlider() {
                   <Image src="/images/client-sana.jpg" alt="Client Sana" fill className="object-cover" />
                 </motion.div>
               </div>
-              <span className="text-xs text-slate-700 font-semibold">
+              <span className="text-xs text-theme-heading font-semibold">
                 Trusted by Hundreds of Satisfied Clients
               </span>
             </motion.div>
@@ -137,10 +148,10 @@ export default function HeroSlider() {
                 transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
                 className="flex items-center space-x-2 px-4 py-2 rounded-full bg-white/95 border border-gray-200 backdrop-blur-md text-slate-800 text-xs shadow-xl pointer-events-auto"
               >
-                <div className="w-6 h-6 rounded-full bg-amber-50 flex items-center justify-center border border-amber-200">
-                  <MapPin className="w-3.5 h-3.5 text-[#B8860B]" />
+                <div className="w-6 h-6 rounded-full bg-primary-light flex items-center justify-center border border-primary-border">
+                  <MapPin className="w-3.5 h-3.5 text-primary" />
                 </div>
-                <span className="font-bold text-xs text-slate-900">Islamabad, Pakistan</span>
+                <span className="font-bold text-xs text-theme-heading">Islamabad, Pakistan</span>
               </motion.div>
             </motion.div>
 
@@ -162,7 +173,7 @@ export default function HeroSlider() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
               <div className="absolute bottom-2.5 left-3 right-3 text-[11px] font-bold text-white flex items-center justify-between">
                 <span>Villas & Penthouses</span>
-                <ArrowRight className="w-3.5 h-3.5 text-amber-400 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 text-primary group-hover:translate-x-1 transition-transform" />
               </div>
             </motion.div>
 

@@ -45,7 +45,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9] pt-24 sm:pt-28 pb-16 text-slate-900">
+    <div className="min-h-screen bg-theme-bg pt-24 sm:pt-28 pb-16 text-theme-heading">
       
       {/* Header (Screen-Fit & Compact) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10">
@@ -55,13 +55,13 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto space-y-3"
         >
-          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-[#B8860B] font-bold bg-amber-50 border border-amber-200/80 px-4 py-1.5 rounded-full shadow-sm">
+          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-primary font-bold bg-primary-light border border-primary-border px-4 py-1.5 rounded-full shadow-sm">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Company Heritage & Leadership</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Pioneering <span className="text-[#B8860B]">Real Estate Integrity</span>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-theme-heading tracking-tight leading-tight">
+            Pioneering <span className="text-primary">Real Estate Integrity</span>
           </h1>
 
           <p className="text-slate-600 text-xs sm:text-sm font-normal max-w-2xl mx-auto leading-relaxed">
@@ -80,11 +80,11 @@ export default function AboutPage() {
           className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col lg:flex-row items-center gap-8 lg:gap-10"
         >
           <div className="w-full lg:w-1/2 space-y-4">
-            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B8860B]">
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-primary">
               Founder’s Vision
             </span>
 
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-theme-heading leading-snug">
               "We Don’t Just Market Properties; We Protect Legacies."
             </h2>
 
@@ -98,13 +98,13 @@ export default function AboutPage() {
 
             <div className="pt-3 border-t border-gray-100 flex items-center justify-between text-xs sm:text-sm">
               <div>
-                <div className="text-slate-900 font-bold">Atif Khan</div>
-                <div className="text-[11px] text-[#B8860B] font-semibold">Founder & Chief Executive Officer</div>
+                <div className="text-theme-heading font-bold">Atif Khan</div>
+                <div className="text-[11px] text-primary font-semibold">Founder & Chief Executive Officer</div>
               </div>
 
               <div className="text-right">
-                <div className="text-slate-900 font-bold">Jalil Khan</div>
-                <div className="text-[11px] text-[#B8860B] font-semibold">Co-Founder & Director of Operations</div>
+                <div className="text-theme-heading font-bold">Jalil Khan</div>
+                <div className="text-[11px] text-primary font-semibold">Co-Founder & Director of Operations</div>
               </div>
             </div>
           </div>
@@ -118,8 +118,8 @@ export default function AboutPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <div className="absolute bottom-3 left-3 right-3 bg-white/95 p-3 rounded-xl border border-gray-200 backdrop-blur-md text-xs text-slate-800 flex items-center justify-between shadow-sm">
-              <span className="font-semibold text-slate-900">Islamabad HQ • G-11 Markaz</span>
-              <span className="text-[#B8860B] font-bold">Office # 8, Al Anayat Mall</span>
+              <span className="font-semibold text-theme-heading">Islamabad HQ • G-11 Markaz</span>
+              <span className="text-primary font-bold">Office # 8, Al Anayat Mall</span>
             </div>
           </div>
         </motion.div>
@@ -128,8 +128,8 @@ export default function AboutPage() {
       {/* Milestones (Screen Fit Compact Cards) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
         <div className="text-center max-w-xl mx-auto mb-6 sm:mb-8 space-y-1.5">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Our Journey of <span className="text-[#B8860B]">Growth & Trust</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-theme-heading tracking-tight">
+            Our Journey of <span className="text-primary">Growth & Trust</span>
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
             Audited milestones shaping our six-year corporate legacy.
@@ -145,12 +145,12 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
               whileHover={{ y: -4 }}
-              className="bg-white border border-gray-200 rounded-2xl p-5 space-y-2 group hover:border-[#B8860B] hover:shadow-md transition-all shadow-sm"
+              className="bg-white border border-gray-200 rounded-2xl p-5 space-y-2 group hover:border-primary hover:shadow-md transition-all shadow-sm"
             >
-              <div className="text-2xl sm:text-3xl font-extrabold text-[#B8860B]">
+              <div className="text-2xl sm:text-3xl font-extrabold text-primary">
                 {m.year}
               </div>
-              <h3 className="text-sm sm:text-base font-bold text-slate-900">
+              <h3 className="text-sm sm:text-base font-bold text-theme-heading">
                 {m.title}
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-normal">
@@ -164,8 +164,8 @@ export default function AboutPage() {
       {/* Leadership Grid (Screen Fit Proportions) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
         <div className="text-center max-w-xl mx-auto mb-6 sm:mb-8 space-y-1.5">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Executive <span className="text-[#B8860B]">Leadership Team</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-theme-heading tracking-tight">
+            Executive <span className="text-primary">Leadership Team</span>
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
             Meet the property directors guiding your wealth journey.
@@ -193,10 +193,10 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-[#B8860B] transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-theme-heading group-hover:text-primary transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-[#B8860B] text-[11px] font-bold uppercase tracking-wider mt-0.5">
+                <p className="text-primary text-[11px] font-bold uppercase tracking-wider mt-0.5">
                   {member.role}
                 </p>
               </div>
@@ -207,7 +207,7 @@ export default function AboutPage() {
 
               <div className="pt-2.5 border-t border-gray-100 text-[11px] space-y-1">
                 <span className="text-slate-500 font-medium block">Specialization:</span>
-                <span className="text-slate-900 font-semibold block leading-snug">
+                <span className="text-theme-heading font-semibold block leading-snug">
                   {member.specialization}
                 </span>
               </div>
@@ -222,10 +222,10 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white border border-amber-300 rounded-3xl p-6 sm:p-8 shadow-md space-y-4"
+          className="bg-white border border-primary-border rounded-3xl p-6 sm:p-8 shadow-md space-y-4"
         >
-          <h3 className="text-xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Ready to Build Your <span className="text-[#B8860B]">High-Yield Portfolio?</span>
+          <h3 className="text-xl sm:text-3xl font-extrabold text-theme-heading tracking-tight">
+            Ready to Build Your <span className="text-primary">High-Yield Portfolio?</span>
           </h3>
           <p className="text-slate-600 text-xs sm:text-sm max-w-lg mx-auto leading-relaxed">
             Book a private meeting with our executive directors at our G-11 Markaz headquarters or connect with our overseas advisory desk.
@@ -233,7 +233,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <button
               onClick={() => openBooking()}
-              className="btn-gold-shimmer px-6 py-3 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white font-bold uppercase tracking-wider text-xs active:scale-95 transition-all shadow-md cursor-pointer"
+              className="px-6 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold uppercase tracking-wider text-xs active:scale-95 transition-all shadow-md cursor-pointer"
             >
               Book In-Person Consultation
             </button>

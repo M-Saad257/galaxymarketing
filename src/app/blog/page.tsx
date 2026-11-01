@@ -41,7 +41,7 @@ export default function BlogPage() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9] pt-24 sm:pt-28 pb-16 text-slate-900">
+    <div className="min-h-screen bg-theme-bg pt-24 sm:pt-28 pb-16 text-theme-heading">
       
       {/* Header (Screen Fit & Compact) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
@@ -51,13 +51,13 @@ export default function BlogPage() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto space-y-3"
         >
-          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-[#B8860B] font-bold bg-amber-50 border border-amber-200/80 px-4 py-1.5 rounded-full shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#B8860B]" />
+          <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-primary font-bold bg-primary-light border border-primary-border px-4 py-1.5 rounded-full shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-primary" />
             <span>Galaxy Market Insights & Guides</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Real Estate Insights, <span className="text-[#B8860B]">Analysis & Guides</span>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-theme-heading tracking-tight leading-tight">
+            Real Estate Insights, <span className="text-primary">Analysis & Guides</span>
           </h1>
 
           <p className="text-slate-600 text-xs sm:text-sm font-normal max-w-2xl mx-auto leading-relaxed">
@@ -79,8 +79,8 @@ export default function BlogPage() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                   selectedCategory === cat
-                    ? 'bg-[#B8860B] text-white shadow-md shadow-amber-500/20'
-                    : 'bg-[#F8F9FA] text-slate-600 hover:bg-gray-100 hover:text-slate-900 border border-gray-200'
+                    ? 'bg-primary text-white shadow-md'
+                    : 'bg-theme-surface text-slate-600 hover:bg-gray-100 hover:text-slate-900 border border-gray-200'
                 }`}
               >
                 {cat}
@@ -95,7 +95,7 @@ export default function BlogPage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search guides, analysis, Murree..."
-              className="w-full pl-9 pr-4 py-2 bg-[#F8F9FA] border border-gray-200 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#B8860B] focus:bg-white transition-colors"
+              className="w-full pl-9 pr-4 py-2 bg-theme-surface border border-gray-200 rounded-xl text-xs text-theme-heading placeholder-slate-400 focus:outline-none focus:border-primary focus:bg-white transition-colors"
             />
           </div>
         </motion.div>
@@ -122,12 +122,12 @@ export default function BlogPage() {
                   <div className="w-full lg:w-1/2 space-y-4">
                     {/* Top Badges */}
                     <div className="flex flex-wrap items-center gap-2">
-                      <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#B8860B] text-xs font-bold">
+                      <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-primary-light border border-primary-border text-primary text-xs font-bold">
                         <Calendar className="w-3.5 h-3.5" />
                         <span>{post.day} {post.month} 2026</span>
                       </div>
 
-                      <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#F8F9FA] border border-gray-200 text-slate-700">
+                      <span className="px-3 py-1 rounded-full text-xs font-bold bg-theme-surface border border-gray-200 text-slate-700">
                         {post.category}
                       </span>
 
@@ -139,13 +139,13 @@ export default function BlogPage() {
 
                     {/* Title */}
                     <Link href={`/blog/${post.slug}`}>
-                      <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 group-hover:text-[#B8860B] transition-colors leading-tight">
+                      <h2 className="text-2xl sm:text-3xl font-extrabold text-theme-heading group-hover:text-primary transition-colors leading-tight">
                         {post.title}
                       </h2>
                     </Link>
 
                     {post.subtitle && (
-                      <p className="text-xs sm:text-sm font-semibold text-[#B8860B]">
+                      <p className="text-xs sm:text-sm font-semibold text-primary">
                         {post.subtitle}
                       </p>
                     )}
@@ -160,7 +160,7 @@ export default function BlogPage() {
                       {post.tags.map((tag, tIdx) => (
                         <span
                           key={tIdx}
-                          className="text-[10px] font-medium bg-[#F8F9FA] text-slate-600 px-2.5 py-1 rounded-lg border border-gray-200"
+                          className="text-[10px] font-medium bg-theme-surface text-slate-600 px-2.5 py-1 rounded-lg border border-gray-200"
                         >
                           #{tag}
                         </span>
@@ -171,7 +171,7 @@ export default function BlogPage() {
                     <div className="pt-2 flex flex-wrap items-center gap-3">
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="btn-gold-shimmer px-6 py-3 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white text-xs font-bold transition-all shadow-md flex items-center space-x-2"
+                        className="px-6 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all shadow-md flex items-center space-x-2"
                       >
                         <span>Read Complete Guide</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -179,7 +179,7 @@ export default function BlogPage() {
 
                       <button
                         onClick={() => openBooking(`Inquiry on ${post.title}`)}
-                        className="px-5 py-3 rounded-xl bg-[#F8F9FA] hover:bg-gray-100 text-slate-800 text-xs font-bold border border-gray-200 transition-all cursor-pointer"
+                        className="px-5 py-3 rounded-xl bg-theme-surface hover:bg-gray-100 text-slate-800 text-xs font-bold border border-gray-200 transition-all cursor-pointer"
                       >
                         Book Advisory
                       </button>
@@ -198,7 +198,7 @@ export default function BlogPage() {
                     
                     {/* Inset Date Badge on Top Left */}
                     <div className="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-md rounded-xl px-3 py-1.5 text-center border border-gray-200 shadow-md">
-                      <div className="text-lg font-extrabold text-[#B8860B] leading-none">
+                      <div className="text-lg font-extrabold text-primary leading-none">
                         {post.day}
                       </div>
                       <div className="text-[9px] font-bold text-slate-700 tracking-wider uppercase mt-0.5">
@@ -208,8 +208,8 @@ export default function BlogPage() {
 
                     {/* Bottom Frosted Inset Badge */}
                     <div className="absolute bottom-3 left-3 right-3 bg-white/95 p-3.5 rounded-xl border border-gray-200 backdrop-blur-md text-xs text-slate-800 flex items-center justify-between shadow-sm">
-                      <span className="font-semibold text-slate-900">{post.author}</span>
-                      <span className="text-[11px] text-[#B8860B] font-extrabold bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">
+                      <span className="font-semibold text-theme-heading">{post.author}</span>
+                      <span className="text-[11px] text-primary font-extrabold bg-primary-light px-2.5 py-1 rounded-lg border border-primary-border">
                         Verified Research
                       </span>
                     </div>
@@ -221,13 +221,13 @@ export default function BlogPage() {
         ) : (
           <div className="bg-white rounded-3xl p-12 text-center border border-gray-200 shadow-sm space-y-3">
             <AlertCircle className="w-10 h-10 text-amber-500 mx-auto" />
-            <h3 className="text-lg font-bold text-slate-900">No articles found</h3>
+            <h3 className="text-lg font-bold text-theme-heading">No articles found</h3>
             <p className="text-xs text-slate-500 max-w-sm mx-auto">
               No guides match your search criteria. Try selecting another category or resetting filters.
             </p>
             <button
               onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-              className="px-4 py-2 rounded-xl bg-[#B8860B] text-white text-xs font-bold shadow-sm cursor-pointer"
+              className="px-4 py-2 rounded-xl bg-primary text-white text-xs font-bold shadow-sm cursor-pointer"
             >
               Reset Filters
             </button>
@@ -239,14 +239,14 @@ export default function BlogPage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 bg-white border border-amber-300 rounded-3xl p-6 sm:p-8 shadow-md flex flex-col md:flex-row items-center justify-between gap-6"
+          className="mt-12 bg-white border border-primary-border rounded-3xl p-6 sm:p-8 shadow-md flex flex-col md:flex-row items-center justify-between gap-6"
         >
           <div className="space-y-1.5 text-center md:text-left">
-            <div className="inline-flex items-center space-x-1.5 text-[11px] font-bold text-[#B8860B] uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-1.5 text-[11px] font-bold text-primary uppercase tracking-wider">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>Direct Real Estate Desk</span>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
+            <h3 className="text-xl sm:text-2xl font-bold text-theme-heading">
               Want Verified Guidance Before You Invest in Murree or Islamabad?
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 max-w-2xl">
@@ -258,7 +258,7 @@ export default function BlogPage() {
             onClick={() => openBooking('Murree & Islamabad Property Consultation')}
             whileHover={{ scale: 1.04, y: -2 }}
             whileTap={{ scale: 0.96 }}
-            className="btn-gold-shimmer px-6 py-3.5 rounded-xl bg-[#B8860B] hover:bg-[#996515] text-white text-xs sm:text-sm font-bold shadow-md shrink-0 flex items-center space-x-2 cursor-pointer"
+            className="px-6 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs sm:text-sm font-bold shadow-md shrink-0 flex items-center space-x-2 cursor-pointer"
           >
             <span>Consult an Expert</span>
             <ArrowRight className="w-4 h-4" />

@@ -22,7 +22,7 @@ export default function ServicesGrid() {
       subtitle: 'Advisory & Portfolio Management',
       description: 'Institutional-grade investment advisory, legal verification, title vetting, and CDA/RDA compliance audits for high-net-worth investors.',
       image: '/images/service-consultancy.jpg',
-      icon: <Compass className="w-5 h-5 text-[#B8860B]" />,
+      icon: <Compass className="w-5 h-5 text-primary" />,
     },
     {
       id: 'marketing',
@@ -30,7 +30,7 @@ export default function ServicesGrid() {
       subtitle: 'Exclusive Mandates & Sales',
       description: 'End-to-end multi-channel marketing campaigns, high-converting investor roadshows in UAE & UK, and sales acceleration for premier developers.',
       image: '/images/hero-eighteen.jpg',
-      icon: <Megaphone className="w-5 h-5 text-[#B8860B]" />,
+      icon: <Megaphone className="w-5 h-5 text-primary" />,
     },
     {
       id: 'investment',
@@ -38,12 +38,12 @@ export default function ServicesGrid() {
       subtitle: 'Capital Growth & Rental Yields',
       description: 'Curated high-appreciation alpine sanctuaries in Murree and pre-leased commercial towers in Islamabad with guaranteed cashflow distributions.',
       image: '/images/service-investment.jpg',
-      icon: <Coins className="w-5 h-5 text-[#B8860B]" />,
+      icon: <Coins className="w-5 h-5 text-primary" />,
     },
   ];
 
   return (
-    <section id="services-section" className="w-full py-16 sm:py-20 lg:py-24 bg-[#F8F9FA] border-b border-gray-200 relative overflow-hidden flex items-center">
+    <section id="services-section" className="w-full py-16 sm:py-20 lg:py-24 bg-theme-surface border-b border-gray-200 relative overflow-hidden flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         
         {/* Header */}
@@ -55,11 +55,11 @@ export default function ServicesGrid() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-1.5"
           >
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#B8860B]">
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
               OUR SERVICES
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
-              How We Can <span className="text-[#B8860B]">Help You</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-theme-heading tracking-tight">
+              How We Can <span className="text-primary">Help You</span>
             </h2>
           </motion.div>
 
@@ -77,10 +77,10 @@ export default function ServicesGrid() {
             >
               <Link
                 href="/services"
-                className="px-5 py-2.5 rounded-full border border-gray-300 bg-white text-slate-700 hover:text-[#B8860B] hover:border-[#B8860B] text-xs font-semibold flex items-center space-x-2 transition-all shadow-sm group"
+                className="px-5 py-2.5 rounded-full border border-gray-300 bg-white text-slate-700 hover:text-primary hover:border-primary text-xs font-semibold flex items-center space-x-2 transition-all shadow-sm group"
               >
                 <span>View All Services</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#B8860B] transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-3.5 h-3.5 text-primary transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </motion.div>
           </motion.div>
@@ -97,7 +97,7 @@ export default function ServicesGrid() {
               transition={{ duration: 0.65, delay: idx * 0.14, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -8 }}
               onClick={() => openBooking(srv.title)}
-              className="group relative h-[320px] sm:h-[360px] rounded-3xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl border border-gray-200 hover:border-[#B8860B] transition-all duration-300 flex flex-col justify-end p-6 bg-white"
+              className="group relative h-[320px] sm:h-[360px] rounded-3xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl border border-gray-200 hover:border-primary transition-all duration-300 flex flex-col justify-end p-6 bg-white"
             >
               {/* Image */}
               <Image
@@ -115,7 +115,7 @@ export default function ServicesGrid() {
                 <motion.div 
                   whileHover={{ scale: 1.15, rotate: 6 }}
                   transition={{ type: 'spring', stiffness: 350, damping: 15 }}
-                  className="w-11 h-11 rounded-2xl bg-white/95 border border-amber-200/60 flex items-center justify-center backdrop-blur-md shadow-md text-[#B8860B]"
+                  className="w-11 h-11 rounded-2xl bg-white/95 border border-primary-border flex items-center justify-center backdrop-blur-md shadow-md text-primary"
                 >
                   {srv.icon}
                 </motion.div>
@@ -123,10 +123,10 @@ export default function ServicesGrid() {
 
               {/* Content at Bottom */}
               <div className="relative z-10 space-y-2">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-amber-300">
+                <div className="text-[10px] font-bold uppercase tracking-wider text-primary-light">
                   {srv.subtitle}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-amber-200 transition-colors leading-snug">
+                <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-primary-border transition-colors leading-snug">
                   {srv.title}
                 </h3>
                 <p className="text-xs text-gray-200 line-clamp-2 leading-relaxed font-normal">
@@ -137,7 +137,7 @@ export default function ServicesGrid() {
                   <span className="text-xs font-semibold text-gray-200 group-hover:text-white transition-colors">
                     Explore Advisory & Plans
                   </span>
-                  <div className="w-9 h-9 rounded-full bg-white/95 text-slate-900 group-hover:bg-[#B8860B] group-hover:text-white transition-all flex items-center justify-center shadow-md">
+                  <div className="w-9 h-9 rounded-full bg-white/95 text-slate-900 group-hover:bg-primary group-hover:text-white transition-all flex items-center justify-center shadow-md">
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                   </div>
                 </div>

@@ -21,7 +21,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="footer-section" className="bg-[#F8F9FA] text-slate-600 text-xs border-t border-gray-200 py-12 relative overflow-hidden">
+    <footer id="footer-section" className="bg-theme-surface text-slate-600 text-xs border-t border-gray-200 py-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Main 4-Column Grid */}
@@ -53,7 +53,7 @@ export default function Footer() {
                 rel="noreferrer"
                 whileHover={{ scale: 1.15, y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-600 hover:text-[#B8860B] hover:border-[#B8860B] shadow-sm transition-colors"
+                className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-600 hover:text-primary hover:border-primary shadow-sm transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -64,7 +64,7 @@ export default function Footer() {
                 rel="noreferrer"
                 whileHover={{ scale: 1.15, y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-600 hover:text-[#B8860B] hover:border-[#B8860B] shadow-sm transition-colors"
+                className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-600 hover:text-primary hover:border-primary shadow-sm transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
@@ -75,7 +75,7 @@ export default function Footer() {
                 rel="noreferrer"
                 whileHover={{ scale: 1.15, y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-600 hover:text-[#B8860B] hover:border-[#B8860B] shadow-sm transition-colors"
+                className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-600 hover:text-primary hover:border-primary shadow-sm transition-colors"
                 aria-label="YouTube"
               >
                 <Youtube className="w-4 h-4" />
@@ -86,7 +86,7 @@ export default function Footer() {
                 rel="noreferrer"
                 whileHover={{ scale: 1.15, y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-600 hover:text-[#B8860B] hover:border-[#B8860B] shadow-sm transition-colors"
+                className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-600 hover:text-primary hover:border-primary shadow-sm transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
@@ -96,56 +96,56 @@ export default function Footer() {
 
           {/* Col 2: Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-sm font-bold text-slate-900 tracking-wide font-serif">
+            <h4 className="text-sm font-bold text-theme-heading tracking-wide font-serif">
               Quick Links
             </h4>
             <ul className="space-y-2.5">
-              <li><Link href="/" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Home</Link></li>
-              <li><Link href="/projects" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Projects</Link></li>
-              <li><Link href="/societies" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Societies</Link></li>
-              <li><Link href="/about" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">About Us</Link></li>
-              <li><Link href="/services" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Services</Link></li>
-              <li><Link href="/blog" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Blog</Link></li>
-              <li><Link href="/contact" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Contact</Link></li>
+              <li><Link href="/" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Home</Link></li>
+              <li><Link href="/projects" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Projects</Link></li>
+              <li><Link href="/societies" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Societies</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">About Us</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Services</Link></li>
+              <li><Link href="/blog" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Blog</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Contact</Link></li>
             </ul>
           </div>
 
           {/* Col 3: Our Services */}
           <div className="space-y-4">
-            <h4 className="text-sm font-bold text-slate-900 tracking-wide font-serif">
+            <h4 className="text-sm font-bold text-theme-heading tracking-wide font-serif">
               Our Services
             </h4>
             <ul className="space-y-2.5">
-              <li><Link href="/services" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Real Estate Consultancy</Link></li>
-              <li><Link href="/services" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Project Marketing</Link></li>
-              <li><Link href="/services" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Investment Opportunities</Link></li>
-              <li><Link href="/services" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Property Management</Link></li>
-              <li><Link href="/services" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Market Analysis</Link></li>
-              <li><Link href="/services" className="hover:text-[#B8860B] transition-colors inline-block hover:translate-x-1 duration-200">Advisory Services</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Real Estate Consultancy</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Project Marketing</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Investment Opportunities</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Property Management</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Market Analysis</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200">Advisory Services</Link></li>
             </ul>
           </div>
 
           {/* Col 4: Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-sm font-bold text-slate-900 tracking-wide font-serif">
+            <h4 className="text-sm font-bold text-theme-heading tracking-wide font-serif">
               Contact Info
             </h4>
             <ul className="space-y-3 text-slate-600">
               <li className="flex items-start space-x-2.5">
-                <MapPin className="w-4 h-4 text-[#B8860B] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                 <span>Office 8, 2nd Floor, Al-Anayat Mall, G-11 Markaz, Islamabad, Pakistan, 44000</span>
               </li>
               <li className="flex items-center space-x-2.5">
-                <Phone className="w-4 h-4 text-[#B8860B] shrink-0" />
-                <a href="tel:03095550790" className="hover:text-[#B8860B] transition-colors">0309-555-0790</a>
+                <Phone className="w-4 h-4 text-primary shrink-0" />
+                <a href="tel:03095550790" className="hover:text-primary transition-colors">0309-555-0790</a>
               </li>
               <li className="flex items-center space-x-2.5">
-                <Phone className="w-4 h-4 text-[#B8860B] shrink-0" />
-                <a href="tel:0518488384" className="hover:text-[#B8860B] transition-colors">051-8488384</a>
+                <Phone className="w-4 h-4 text-primary shrink-0" />
+                <a href="tel:0518488384" className="hover:text-primary transition-colors">051-8488384</a>
               </li>
               <li className="flex items-center space-x-2.5">
-                <Mail className="w-4 h-4 text-[#B8860B] shrink-0" />
-                <a href="mailto:info@galaxymarketing.pk" className="hover:text-[#B8860B] transition-colors">info@galaxymarketing.pk</a>
+                <Mail className="w-4 h-4 text-primary shrink-0" />
+                <a href="mailto:info@galaxymarketing.pk" className="hover:text-primary transition-colors">info@galaxymarketing.pk</a>
               </li>
             </ul>
           </div>
@@ -164,7 +164,7 @@ export default function Footer() {
               onClick={scrollToTop}
               whileHover={{ scale: 1.15, y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-8 h-8 rounded-full bg-white border border-gray-200 hover:border-[#B8860B] hover:text-[#B8860B] flex items-center justify-center text-slate-500 shadow-sm transition-colors cursor-pointer"
+              className="w-8 h-8 rounded-full bg-white border border-gray-200 hover:border-primary hover:text-primary flex items-center justify-center text-slate-500 shadow-sm transition-colors cursor-pointer"
               aria-label="Scroll to top"
             >
               <ArrowUp className="w-4 h-4" />

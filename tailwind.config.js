@@ -8,6 +8,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: {
+          DEFAULT: 'var(--primary)',
+          hover: 'var(--primary-hover)',
+          light: 'var(--primary-light)',
+          border: 'var(--primary-border)',
+          text: 'var(--primary-text)',
+        },
+        theme: {
+          bg: 'var(--theme-bg)',
+          surface: 'var(--theme-surface)',
+          card: 'var(--theme-card)',
+          heading: 'var(--theme-heading)',
+          body: 'var(--theme-body)',
+          muted: 'var(--theme-muted)',
+          border: 'var(--theme-border)',
+        },
         gold: {
           50: '#FDFBF7',
           100: '#F9F4E8',
@@ -30,8 +46,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        serif: ['var(--font-cinzel)', 'Georgia', 'serif'],
-        sans: ['var(--font-outfit)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'gold-gradient': 'linear-gradient(135deg, #FFF1BD 0%, #D4AF37 50%, #AA820A 100%)',
