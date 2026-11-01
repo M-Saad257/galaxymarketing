@@ -29,15 +29,26 @@ export default function Footer() {
           
           {/* Col 1: Logo & Mission */}
           <div className="space-y-4">
-            <Link href="/" className="inline-flex items-center shrink-0 group" aria-label="Galaxy Marketing Home">
-              <div className="relative h-10 w-36 sm:h-11 sm:w-44">
+            <Link href="/" className="inline-flex items-center space-x-3 shrink-0 group" aria-label="Galaxy Marketing Home">
+              {/* Circular GM Emblem */}
+              <div className="relative w-11 h-11 sm:w-12 sm:h-12 shrink-0 drop-shadow-sm transition-transform duration-300 group-hover:scale-105">
                 <Image
-                  src="/images/logo.png"
-                  alt="Galaxy Marketing"
+                  src="/images/logo-icon.png"
+                  alt="Galaxy Marketing Emblem"
                   fill
-                  sizes="(max-width: 640px) 144px, 176px"
-                  className="object-contain object-left transition-transform duration-300 group-hover:scale-[1.03]"
+                  sizes="(max-width: 640px) 44px, 48px"
+                  className="object-contain"
                 />
+              </div>
+
+              {/* Prominent Typography */}
+              <div className="flex flex-col justify-center items-start leading-none select-none">
+                <span className="font-brand text-lg sm:text-xl font-black tracking-[0.14em] text-slate-900 group-hover:text-primary transition-colors">
+                  GALAXY
+                </span>
+                <span className="font-brand text-[10.5px] sm:text-xs font-extrabold tracking-[0.28em] text-primary uppercase mt-1">
+                  MARKETING
+                </span>
               </div>
             </Link>
 

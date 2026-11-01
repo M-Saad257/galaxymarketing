@@ -52,16 +52,27 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
 
           {/* Galaxy Marketing Logo */}
-          <Link href="/" className="flex items-center shrink-0 group" aria-label="Galaxy Marketing Home">
-            <div className="relative h-10 w-36 sm:h-11 sm:w-44">
+          <Link href="/" className="flex items-center space-x-2.5 sm:space-x-3 shrink-0 group" aria-label="Galaxy Marketing Home">
+            {/* Circular GM Emblem */}
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 shrink-0 drop-shadow-sm transition-transform duration-300 group-hover:scale-105">
               <Image
-                src="/images/logo.png"
-                alt="Galaxy Marketing"
+                src="/images/logo-icon.png"
+                alt="Galaxy Marketing Emblem"
                 fill
                 priority
-                sizes="(max-width: 640px) 144px, 176px"
-                className="object-contain object-left transition-transform duration-300 group-hover:scale-[1.03]"
+                sizes="(max-width: 640px) 40px, 44px"
+                className="object-contain"
               />
+            </div>
+
+            {/* Prominent Typography */}
+            <div className="flex flex-col justify-center items-start leading-none select-none">
+              <span className="font-brand text-base sm:text-[18px] font-black tracking-[0.14em] text-slate-900 group-hover:text-primary transition-colors">
+                GALAXY
+              </span>
+              <span className="font-brand text-[9.5px] sm:text-[10.5px] font-extrabold tracking-[0.28em] text-primary uppercase mt-1">
+                MARKETING
+              </span>
             </div>
           </Link>
 
@@ -73,13 +84,19 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`transition-colors duration-200 relative group py-1 ${isActive
-                      ? 'text-primary font-bold border-b-2 border-primary'
-                      : 'text-slate-700 hover:text-primary'
-                    }`}
+                  className={`transition-colors duration-200 relative group py-1.5 flex flex-col items-center ${
+                    isActive ? 'text-primary font-bold' : 'text-slate-700 hover:text-primary'
+                  }`}
                 >
-                  {link.name}
-                  <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full ${isActive ? 'w-full' : ''}`} />
+                  <span>{link.name}</span>
+                  {/* Rounded Pill Indicator Line for Hover & Active Page */}
+                  <span
+                    className={`absolute -bottom-0.5 h-[3px] rounded-full bg-primary transition-all duration-300 ${
+                      isActive
+                        ? 'w-full opacity-100'
+                        : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-100'
+                    }`}
+                  />
                 </Link>
               );
             })}

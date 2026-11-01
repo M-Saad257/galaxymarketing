@@ -46,6 +46,7 @@ module.exports = {
         },
       },
       fontFamily: {
+        brand: ['var(--font-brand)', 'Montserrat', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
         serif: ['var(--font-serif)', 'Georgia', 'serif'],
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
       },

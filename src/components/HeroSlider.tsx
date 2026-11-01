@@ -37,17 +37,6 @@ export default function HeroSlider() {
           
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-6">
-            
-            {/* Pill Eyebrow Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: -15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
-              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-primary-light border border-primary-border text-primary text-xs font-bold uppercase tracking-wider backdrop-blur-sm"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-primary" />
-              <span>Capital Investment Partner</span>
-            </motion.div>
 
             {/* Headline with animated slide-up */}
             <motion.h1 

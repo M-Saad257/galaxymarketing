@@ -71,14 +71,24 @@ export default function VipBookingModal({ isOpen, onClose, defaultProject = 'Hol
 
         {!submitted ? (
           <div>
-            <div className="relative h-9 w-36 sm:h-10 sm:w-40 mb-3">
-              <Image
-                src="/images/logo.png"
-                alt="Galaxy Marketing"
-                fill
-                sizes="160px"
-                className="object-contain object-left"
-              />
+            <div className="flex items-center space-x-3 mb-3 select-none">
+              <div className="relative w-10 h-10 shrink-0 drop-shadow-sm">
+                <Image
+                  src="/images/logo-icon.png"
+                  alt="Galaxy Marketing"
+                  fill
+                  sizes="40px"
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col justify-center items-start leading-none">
+                <span className="font-brand text-base font-black tracking-[0.14em] text-slate-900">
+                  GALAXY
+                </span>
+                <span className="font-brand text-[9.5px] font-extrabold tracking-[0.28em] text-primary uppercase mt-1">
+                  MARKETING
+                </span>
+              </div>
             </div>
 
             <div className="flex items-center space-x-2 text-primary text-xs font-bold uppercase tracking-widest mb-1.5">
