@@ -25,7 +25,37 @@ export interface ThemeConfig {
 }
 
 /**
- * 1. SAVED ORIGINAL THEME: Imperial Gold & Warm Stone
+ * 1. ACTIVE THEME: Emerald Alpine & Forest Jade
+ * Tailored for scenic Murree & Highland real estate developments.
+ */
+export const EMERALD_ALPINE_THEME: ThemeConfig = {
+  id: 'emerald',
+  name: 'Emerald Alpine & Forest Jade',
+  badge: 'Active Theme',
+  description: 'Deep Pine Forest Emerald and Mint Jade palette evoking Highland sanctuaries and eco-luxury living.',
+  colors: {
+    primary: '#059669',
+    primaryHover: '#047857',
+    primaryLight: '#ECFDF5',
+    primaryBorder: '#A7F3D0',
+    primaryText: '#065F46',
+    secondary: '#10B981',
+    themeBg: '#F4F7F5',
+    themeSurface: '#EBF2EE',
+    themeCard: '#FFFFFF',
+    themeHeading: '#062822',
+    themeBody: '#1F2937',
+    themeMuted: '#4B5563',
+    themeBorder: '#D1D5DB',
+  },
+  fonts: {
+    sans: "'Outfit', system-ui, sans-serif",
+    serif: "'Playfair Display', Georgia, serif",
+  },
+};
+
+/**
+ * 2. SAVED ORIGINAL THEME: Imperial Gold & Warm Stone
  * Preserved safely as requested by the user.
  */
 export const SAVED_GOLD_THEME: ThemeConfig = {
@@ -55,13 +85,13 @@ export const SAVED_GOLD_THEME: ThemeConfig = {
 };
 
 /**
- * 2. NEW DEFAULT THEME: Royal Sapphire & Ocean Luxe
- * Brand new color theme: Royal Electric Sapphire, Cool Ice Platinum canvas, Outfit geometric typography.
+ * 3. ALTERNATIVE THEME: Royal Sapphire & Ocean Luxe
+ * Modern corporate palette: Electric Royal Sapphire, Crisp Ice Mist surfaces, and Outfit typography.
  */
 export const NEW_SAPPHIRE_THEME: ThemeConfig = {
   id: 'sapphire',
   name: 'Royal Sapphire & Ocean Luxe',
-  badge: 'New Active Theme',
+  badge: 'Sapphire Edition',
   description: 'Ultra-modern high-trust corporate palette: Electric Royal Sapphire, Crisp Ice Mist surfaces, and Outfit typography.',
   colors: {
     primary: '#2563EB',
@@ -84,39 +114,9 @@ export const NEW_SAPPHIRE_THEME: ThemeConfig = {
   },
 };
 
-/**
- * 3. BONUS ALTERNATIVE THEME: Emerald Forest & Alpine Jade
- * Tailored for scenic Murree & Highland real estate developments.
- */
-export const EMERALD_ALPINE_THEME: ThemeConfig = {
-  id: 'emerald',
-  name: 'Emerald Alpine & Forest Jade',
-  badge: 'Alpine Edition',
-  description: 'Deep Pine Forest Emerald and Mint Jade palette evoking Highland sanctuaries and eco-luxury living.',
-  colors: {
-    primary: '#059669',
-    primaryHover: '#047857',
-    primaryLight: '#ECFDF5',
-    primaryBorder: '#A7F3D0',
-    primaryText: '#065F46',
-    secondary: '#10B981',
-    themeBg: '#F4F7F5',
-    themeSurface: '#EBF2EE',
-    themeCard: '#FFFFFF',
-    themeHeading: '#062822',
-    themeBody: '#1F2937',
-    themeMuted: '#4B5563',
-    themeBorder: '#D1D5DB',
-  },
-  fonts: {
-    sans: "'Outfit', system-ui, sans-serif",
-    serif: "'Playfair Display', Georgia, serif",
-  },
-};
-
 export const ALL_THEMES: ThemeConfig[] = [
-  NEW_SAPPHIRE_THEME,
-  SAVED_GOLD_THEME,
   EMERALD_ALPINE_THEME,
+  SAVED_GOLD_THEME,
+  NEW_SAPPHIRE_THEME,
 ];
 

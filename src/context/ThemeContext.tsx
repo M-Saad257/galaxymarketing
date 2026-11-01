@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { ALL_THEMES, ThemeConfig, NEW_SAPPHIRE_THEME } from '@/data/themes/savedTheme';
+import { ALL_THEMES, ThemeConfig, EMERALD_ALPINE_THEME } from '@/data/themes/savedTheme';
 
 interface ThemeContextType {
   currentTheme: ThemeConfig;
@@ -10,17 +10,17 @@ interface ThemeContextType {
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-  currentTheme: NEW_SAPPHIRE_THEME,
+  currentTheme: EMERALD_ALPINE_THEME,
   setThemeById: () => {},
   allThemes: ALL_THEMES,
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // Default to the brand new theme!
-  const [currentTheme, setCurrentTheme] = useState<ThemeConfig>(NEW_SAPPHIRE_THEME);
+  // Default to Emerald Alpine Theme
+  const [currentTheme, setCurrentTheme] = useState<ThemeConfig>(EMERALD_ALPINE_THEME);
 
   useEffect(() => {
-    // Check localStorage for saved choice, otherwise use New Sapphire Theme
+    // Check localStorage for saved choice, otherwise use Emerald Alpine Theme
     const savedId = localStorage.getItem('galaxy-marketing-theme');
     if (savedId) {
       const match = ALL_THEMES.find((t) => t.id === savedId);
@@ -30,8 +30,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         return;
       }
     }
-    // Default apply new theme
-    applyTheme(NEW_SAPPHIRE_THEME);
+    // Default apply Emerald Alpine theme
+    applyTheme(EMERALD_ALPINE_THEME);
   }, []);
 
   const applyTheme = (theme: ThemeConfig) => {

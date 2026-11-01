@@ -4,8 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root, [data-theme='sapphire'] {
-  /* Default: New Royal Sapphire & Ocean Luxe Theme */
+:root, [data-theme='emerald'] {
+  /* Default: Emerald Alpine & Forest Jade Theme */
+  --primary: #059669;
+  --primary-hover: #047857;
+  --primary-light: #ECFDF5;
+  --primary-border: #A7F3D0;
+  --primary-text: #065F46;
+  --secondary: #10B981;
+  --theme-bg: #F4F7F5;
+  --theme-surface: #EBF2EE;
+  --theme-card: #FFFFFF;
+  --theme-heading: #062822;
+  --theme-body: #1F2937;
+  --theme-muted: #4B5563;
+  --theme-border: #D1D5DB;
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+[data-theme='sapphire'] {
+  /* Royal Sapphire & Ocean Luxe Edition */
   --primary: #2563EB;
   --primary-hover: #1D4ED8;
   --primary-light: #EFF6FF;
@@ -40,25 +59,6 @@
   --theme-border: #E5E7EB;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-serif: 'Cinzel', Georgia, serif;
-}
-
-[data-theme='emerald'] {
-  /* Alpine Emerald Edition */
-  --primary: #059669;
-  --primary-hover: #047857;
-  --primary-light: #ECFDF5;
-  --primary-border: #A7F3D0;
-  --primary-text: #065F46;
-  --secondary: #10B981;
-  --theme-bg: #F4F7F5;
-  --theme-surface: #EBF2EE;
-  --theme-card: #FFFFFF;
-  --theme-heading: #062822;
-  --theme-body: #1F2937;
-  --theme-muted: #4B5563;
-  --theme-border: #D1D5DB;
-  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
 }
 
 * {
